@@ -38,9 +38,14 @@ const theme = createTheme({
       styleOverrides: {
         root: {
           textTransform: "none",
-          borderRadius: 8,
+          borderRadius: 100,
+          boxShadow: "none"
         },
+        sizeLarge:{
+          padding: "12px 32px"
+        }
       },
+      
     },
   },
   typography: {
@@ -49,9 +54,9 @@ const theme = createTheme({
   palette: {
     mode: "light",
     primary: {
-      contrastText: "#000",
+      contrastText: "#744209",
       light: "#F8FFF5",
-      main: "#71E83A",
+      main: "#FFB259",
     },
   },
 });

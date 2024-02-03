@@ -47,7 +47,7 @@ const Capabilities = () => {
                 <ProgressBar
                   transition={value >= 1 ? "ease 0.3s" : "none"}
                   progress={value}
-                  radius={14}
+                  radius={12}
                   trackStrokeColor="#00000020"
                   strokeColor="#000000"
                   strokeWidth={6}
