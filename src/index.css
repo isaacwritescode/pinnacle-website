@@ -41,6 +41,14 @@ body {
   overflow-x: hidden;
 }
 
+.fade-in {
+  visibility: visible !important;
+  opacity: 1 !important;
+  transform: scale(1) !important;
+  transition: all ease 0.5s;
+}
+
+
 /* Scrollbar */
 
 ::-webkit-scrollbar {
