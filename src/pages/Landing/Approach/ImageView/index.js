@@ -7,14 +7,14 @@ export const ImageView = ({ currItemIdx }) => {
     <Box
       sx={{
         position: "sticky",
-        top: 0,
-        height: "100vh",
+        top: 80,
+        height: "calc(100vh - 80px)",
         zIndex: 9,
       }}
     >
       <Stack
         justifyContent="center"
-        sx={{ position: "relative", height: "100vh" }}
+        sx={{ position: "relative", height: "calc(100vh - 80px)" }}
       >
         {FEATURES.map(({ image }, idx) => (
           <img

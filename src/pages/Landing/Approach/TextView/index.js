@@ -19,6 +19,7 @@ export const TextView = ({ setCurrItemIdx }) => {
               <Stack
                 justifyContent="center"
                 key={idx}
+                spacing={4}
                 height={{ xs: "auto", md: "100vh" }}
               >
                 <Stack ref={ref} spacing={2}>
