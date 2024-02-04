@@ -24,7 +24,7 @@ const Work = () => {
         <Typography textAlign="center" variant="h1" color="text.primary">
           Work
         </Typography>
-        <Box width={{ xs: "90%", md: "70%" }} mt={16} mx="auto">
+        <Box width={{ xs: "90%", md: "70%" }} mt={8} mx="auto">
           <Grid
             container
             spacing={{ xs: 4, md: 8 }}

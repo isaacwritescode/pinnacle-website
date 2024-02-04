@@ -36,7 +36,7 @@ const Testimonials = () => {
             </Typography>
           </Stack>
           {md || (
-            <Stack spacing={2}>
+            <Stack spacing={4}>
               {TESTIMONIALS.map((item, idx) => (
                 <Card key={idx} {...item} />
               ))}

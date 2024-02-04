@@ -1,19 +1,34 @@
-import { Box, Stack } from "@mui/material";
+import { Box, Stack, useMediaQuery } from "@mui/material";
 import SPONSORS from "./constants";
+import { useTheme } from "@emotion/react";
+import Marquee from "react-fast-marquee";
 
 const Sponsors = ({ brand }) => {
+  const theme = useTheme();
+  const md = useMediaQuery(theme.breakpoints.up("md"));
   return (
-    <Box maxWidth={1000} width={{ xs: "90%", md: "100%" }} m="auto">
+    <Box maxWidth={1000} width="100%" m="auto">
       <Stack
         py={8}
         gap={4}
         direction="row"
         flexWrap="wrap"
+        alignItems="center"
         justifyContent={{ md: "space-between" }}
       >
-        {SPONSORS.map(({ src }, idx) => (
-          <img src={src} idx={idx} alt={brand} />
-        ))}
+        {md ? (
+          SPONSORS.map(({ src }, idx) => (
+            <img src={src} idx={idx} alt={brand} />
+          ))
+        ) : (
+          <Marquee>
+            {SPONSORS.map(({ src }, idx) => (
+              <Box px={2}>
+                <img src={src} idx={idx} alt={brand} />
+              </Box>
+            ))}
+          </Marquee>
+        )}
       </Stack>
     </Box>
   );
