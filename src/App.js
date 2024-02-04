@@ -2,6 +2,8 @@ import { ThemeProvider } from "@mui/material";
 import theme from "./theme";
 import Landing from "./pages/Landing";
 import { useEffect, useState } from "react";
+import { Route, Routes } from "react-router-dom";
+import Layout from "./layout";
 
 function App() {
   const [userHasScrolled, setUserHasScrolled] = useState(false);
@@ -19,7 +21,11 @@ function App() {
 
   return (
     <ThemeProvider theme={theme}>
-      <Landing userHasScrolled={userHasScrolled} />
+      <Routes>
+        <Route path="/" element={<Layout userHasScrolled={userHasScrolled} />}>
+          <Route index element={<Landing />} />
+        </Route>
+      </Routes>
     </ThemeProvider>
   );
 }
