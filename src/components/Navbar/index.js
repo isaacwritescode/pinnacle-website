@@ -15,22 +15,26 @@ const Navbar = ({ userHasScrolled }) => {
     >
       <Box width={{ xs: "90%", md: "70%" }} m="auto" py={1}>
         <Stack justifyContent="space-between" direction="row">
-          <img
-            src="/images/logos/logo+wordmark-white.svg"
-            alt="pinnacle-logo"
-            height={48}
-            style={{
-              filter: userHasScrolled && "grayscale(1) invert(1)",
-            }}
-          />
-          <Button
-            variant="outlined"
-            size="small"
-            color={"secondary"}
-            sx={{ filter: userHasScrolled && "grayscale(1) invert(1)" }}
-          >
-            Contact
-          </Button>
+          <Box data-sal="slide-up" data-sal-delay="100">
+            <img
+              src="/images/logos/logo+wordmark-white.svg"
+              alt="pinnacle-logo"
+              height={48}
+              style={{
+                filter: userHasScrolled && "grayscale(1) invert(1)",
+              }}
+            />
+          </Box>
+          <Box data-sal="slide-up" data-sal-delay="100">
+            <Button
+              variant="outlined"
+              size="small"
+              color={"secondary"}
+              sx={{ filter: userHasScrolled && "grayscale(1) invert(1)" }}
+            >
+              Contact
+            </Button>
+          </Box>
         </Stack>
       </Box>
     </Box>

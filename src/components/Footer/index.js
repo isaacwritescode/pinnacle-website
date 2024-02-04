@@ -28,12 +28,19 @@ const Footer = () => {
           <Grid container columns={{ xs: 3, sm: 6, lg: 12 }} spacing={12}>
             <Grid item xs={3}>
               <Stack maxWidth={300}>
-                <img
-                  src="/images/logos/logo+wordmark.svg"
-                  width="100%"
-                  alt="pinnacle-logo"
-                />
-                <Typography variant="body2" color="text.secondary">
+                <Box data-sal="slide-up" data-sal-delay={100}>
+                  <img
+                    src="/images/logos/logo+wordmark.svg"
+                    width="100%"
+                    alt="pinnacle-logo"
+                  />
+                </Box>
+                <Typography
+                  data-sal="slide-up"
+                  data-sal-delay={200}
+                  variant="body2"
+                  color="text.secondary"
+                >
                   ©2024 Pinnacle Brand Solution. All rights reserved.
                 </Typography>
               </Stack>
@@ -46,7 +53,12 @@ const Footer = () => {
 
                 {QUICK_LINKS.map(({ href, title }, idx) => (
                   <Link href={href}>
-                    <Typography variant="h6" color="text.secondary">
+                    <Typography
+                      data-sal="slide-up"
+                      data-sal-delay={idx * 100}
+                      variant="h6"
+                      color="text.secondary"
+                    >
                       {title}
                     </Typography>
                   </Link>
@@ -58,7 +70,12 @@ const Footer = () => {
                 <Typography variant="h6" color="text.primary">
                   OFFICES
                 </Typography>
-                <Typography variant="h6" color="text.secondary">
+                <Typography
+                  data-sal="slide-up"
+                  data-sal-delay={100}
+                  variant="h6"
+                  color="text.secondary"
+                >
                   Canada
                 </Typography>
               </Stack>
@@ -73,6 +90,8 @@ const Footer = () => {
                     {SOCIAL_LINKS.map(({ icon, url }, idx) => (
                       <Link href={url}>
                         <Stack
+                          data-sal="slide-up"
+                          data-sal-delay={idx * 100}
                           key={idx}
                           color="white"
                           p={1}

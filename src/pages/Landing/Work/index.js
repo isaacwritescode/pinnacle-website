@@ -10,7 +10,6 @@ import WORK from "./constants";
 import Card from "./Card";
 import { Masonry } from "@mui/lab";
 
-
 const Work = () => {
   const theme = useTheme();
   const darkTheme = createTheme({
@@ -24,7 +23,12 @@ const Work = () => {
     <ThemeProvider theme={darkTheme}>
       <Box bgcolor="#212123" pt={24} pb={12} id="work">
         <Box position="relative" textAlign="center">
-          <Typography variant="h1" color="text.primary">
+          <Typography
+            variant="h1"
+            color="text.primary"
+            data-sal="slide-up"
+            data-sal-delay="100"
+          >
             Work
           </Typography>
           <Typography
@@ -42,14 +46,24 @@ const Work = () => {
           >
             Work
           </Typography>
-          <Typography varaint="body2" color="text.secondary">
+          <Typography
+            data-sal="slide-up"
+            data-sal-delay="200"
+            varaint="body2"
+            color="text.secondary"
+          >
             The work we do, the people we help
           </Typography>
         </Box>
         <Box width={{ xs: "90%", md: "70%" }} mt={8} mx="auto">
           <Masonry columns={{ xs: 1, sm: 2 }}>
             {WORK.map((item, idx) => (
-              <Box px={{ sm: 1, md: 2 }} pt={idx === 1 && 4}>
+              <Box
+                data-sal="slide-up"
+                data-sal-delay={idx * 100}
+                px={{ sm: 1, md: 2 }}
+                pt={idx === 1 && 4}
+              >
                 <Card key={idx} {...item} />
               </Box>
             ))}

@@ -29,26 +29,25 @@ const Capabilities = () => {
       sx={{ transition: "all ease 0.3s" }}
       id="capabilities"
     >
-      <Stack
-        justifyContent="center"
-        width={{ xs: "90%", md: "70%" }}
-        mx="auto"
-      >
+      <Stack justifyContent="center" width={{ xs: "90%", md: "70%" }} mx="auto">
         <Grid container alignItems="center" py={16} columns={{ xs: 6, sm: 12 }}>
           <Grid item xs={6}>
             <Stack spacing={{ xs: 3, md: 4 }}>
-              <Typography variant="h5">Our Capabilities</Typography>
+              <Typography data-sal="slide-up" data-sal-delay="100" variant="h5">
+                Our Capabilities
+              </Typography>
               <Stack spacing={{ xs: 2, md: 4 }}>
                 {CAPABILITIES.map(({ title }, idx) => (
-                  <Typography
-                    variant={md ? "h3" : "h4"}
-                    key={idx}
-                    sx={{
-                      opacity: currIdx === idx ? 1 : 0.4,
-                    }}
-                  >
-                    {title}
-                  </Typography>
+                  <Box data-sal="zoom-out" data-sal-delay={idx * 100} key={idx}>
+                    <Typography
+                      variant={md ? "h3" : "h4"}
+                      sx={{
+                        opacity: currIdx === idx ? 1 : 0.4,
+                      }}
+                    >
+                      {title}
+                    </Typography>
+                  </Box>
                 ))}
               </Stack>
               <Stack direction="row" alignItems="center">

@@ -18,7 +18,9 @@ const Sponsors = ({ brand }) => {
       >
         {md ? (
           SPONSORS.map(({ src }, idx) => (
-            <img src={src} idx={idx} alt={brand} />
+            <Box data-sal="slide-up" data-sal-delay={100 * idx}>
+              <img src={src} idx={idx} alt={brand} />
+            </Box>
           ))
         ) : (
           <Marquee>

@@ -16,6 +16,8 @@ const FAQ = () => {
         <Box>
           <Stack spacing={8}>
             <Typography
+              data-sal="slide-up"
+              data-sal-delay="100"
               variant={sm ? "h1" : "h2"}
               textAlign="center"
               fontWeight={600}

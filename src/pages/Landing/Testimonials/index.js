@@ -47,7 +47,12 @@ const Testimonials = () => {
               >
                 Reviews
               </Typography>
-              <Typography varaint="body2" color="text.secondary">
+              <Typography
+                data-sal="slide-up"
+                data-sal-delay="200"
+                varaint="body2"
+                color="text.secondary"
+              >
                 See what our clients have to say about our services
               </Typography>
             </Box>

@@ -18,14 +18,24 @@ const Hero = () => {
           mx="auto"
           textAlign="center"
         >
-          <Typography variant="h2" color="white">
+          <Typography
+            data-sal="zoom-out"
+            data-sal-delay="300"
+            variant="h2"
+            color="white"
+          >
             Reach your pinnacle
           </Typography>
-          <Typography variant="body1" color="white">
+          <Typography
+            data-sal="zoom-out"
+            data-sal-delay="400"
+            variant="body1"
+            color="white"
+          >
             We're passionate about helping businesses reach their peak
             potential, and we're confident that we can make it{" "}
           </Typography>
-          <Box pt={4}>
+          <Box pt={4} data-sal="zoom-out" data-sal-delay="500">
             <Button variant="contained" size="medium">
               Start a project
             </Button>
