@@ -27,7 +27,7 @@ const Testimonials = () => {
     <ThemeProvider theme={darkTheme}>
       <Box bgcolor="#6B30BB" pb={16}>
         <Box width={{ xs: "90%", md: "70%" }} mx="auto">
-          <Stack textAlign="center" pt={16} pb={{ xs: 8, md: 16 }}>
+          <Stack textAlign="center" pt={24} pb={{ xs: 8, md: 16 }}>
             <Box position="relative" textAlign="center">
               <Typography variant="h1" color="text.primary">
                 Reviews
