@@ -1,11 +1,5 @@
 import { useTheme } from "@emotion/react";
-import {
-  Box,
-  Stack,
-  ThemeProvider,
-  Typography,
-  createTheme,
-} from "@mui/material";
+import { Stack, ThemeProvider, Typography, createTheme } from "@mui/material";
 
 const Card = ({ name, designation, body, avatar }) => {
   // Define a custom theme
@@ -20,7 +14,7 @@ const Card = ({ name, designation, body, avatar }) => {
   return (
     <ThemeProvider theme={lightTheme}>
       <Stack
-        bgcolor="white"
+      bgcolor="white"
         width={400}
         mx={2}
         boxSizing="border-box"
@@ -30,7 +24,7 @@ const Card = ({ name, designation, body, avatar }) => {
         sx={{ cursor: "pointer" }}
       >
         <Stack direction="row" spacing={2} alignItems="center">
-          <img src={avatar} width={80} height={80} />
+          <img src={avatar} width={80} height={80} alt={name + "'s review"} />
           <Stack>
             <Typography variant="h6">{name}</Typography>
             <Typography variant="body1" color="text.secondary">

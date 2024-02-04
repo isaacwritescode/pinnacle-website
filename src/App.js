@@ -1,4 +1,4 @@
-import { ThemeProvider, Typography } from "@mui/material";
+import { ThemeProvider } from "@mui/material";
 import theme from "./theme";
 import Landing from "./pages/Landing";
 import { useEffect, useState } from "react";

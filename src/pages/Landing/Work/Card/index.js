@@ -3,7 +3,7 @@ import { Chip, Stack, Typography } from "@mui/material";
 const Card = ({ img, title, desc, tags }) => {
   return (
     <Stack spacing={3}>
-      <img src={img} width="100%" />
+      <img src={img} width="100%" alt={title} />
       <Stack direction="row" spacing={2}>
         {tags.map((item, idx) => (
           <Chip key={idx} label={item} />

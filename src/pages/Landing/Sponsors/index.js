@@ -1,18 +1,18 @@
 import { Box, Stack } from "@mui/material";
 import SPONSORS from "./constants";
 
-const Sponsors = () => {
+const Sponsors = ({ brand }) => {
   return (
     <Box maxWidth={1000} width={{ xs: "90%", md: "100%" }} m="auto">
       <Stack
         py={8}
         gap={4}
         direction="row"
-        justifyContent={{ md: "space-between" }}
         flexWrap="wrap"
+        justifyContent={{ md: "space-between" }}
       >
         {SPONSORS.map(({ src }, idx) => (
-          <img src={src} idx={idx} />
+          <img src={src} idx={idx} alt={brand} />
         ))}
       </Stack>
     </Box>

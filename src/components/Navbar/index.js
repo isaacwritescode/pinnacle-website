@@ -17,6 +17,7 @@ const Navbar = ({ userHasScrolled }) => {
         <Stack justifyContent="space-between" direction="row">
           <img
             src="/images/logos/logo+wordmark-white.svg"
+            alt="pinnacle-logo"
             height={48}
             style={{
               filter: userHasScrolled && "grayscale(1) invert(1)",

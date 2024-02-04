@@ -87,7 +87,11 @@ const Capabilities = () => {
           </Stack>
         </Grid>
         <Grid item xs={6}>
-          <img src={CAPABILITIES[currIdx].thumbnail} width="100%" />
+          <img
+            src={CAPABILITIES[currIdx].thumbnail}
+            width="100%"
+            alt={CAPABILITIES[currIdx].title}
+          />
         </Grid>
       </Grid>
     </Box>

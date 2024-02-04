@@ -27,7 +27,7 @@ const Footer = () => {
           <Grid container columns={{ xs: 3, sm: 6, lg: 12 }} spacing={12}>
             <Grid item xs={3}>
               <Stack maxWidth={300}>
-                <img src="/images/logos/logo+wordmark.svg" width="100%" />
+                <img src="/images/logos/logo+wordmark.svg" width="100%" alt="pinnacle-logo" />
                 <Typography variant="body2" color="text.secondary">
                   ©2024 Pinnacle Brand Solution. All rights reserved.
                 </Typography>

@@ -1,11 +1,8 @@
 import {
-  Email,
   EmailOutlined,
-  Facebook,
   FacebookOutlined,
   Instagram,
   LinkedIn,
-  Twitter,
 } from "@mui/icons-material";
 
 const SOCIAL_LINKS = [
