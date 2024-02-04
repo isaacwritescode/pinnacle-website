@@ -26,7 +26,7 @@ const Hero = () => {
             potential, and we're confident that we can make it{" "}
           </Typography>
           <Box pt={4}>
-            <Button variant="contained" size="large">
+            <Button variant="contained" size="medium">
               Start a project
             </Button>
           </Box>

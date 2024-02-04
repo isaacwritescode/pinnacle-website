@@ -42,6 +42,9 @@ const theme = createTheme({
           boxShadow: "none"
         },
         sizeLarge:{
+          padding: "24px 48px"
+        },
+        sizeMedium:{
           padding: "12px 32px"
         }
       },
