@@ -22,17 +22,19 @@ const Capabilities = () => {
   return (
     <Box
       bgcolor={CAPABILITIES[currIdx].bgColor}
-      height="100vh"
+      height={{ xs: "auto", md: "100vh" }}
       overflow="hidden"
+      pt={{ xs: 8, md: 0 }}
+      sx={{transition: "all ease 0.3s"}}
     >
-      <Grid container alignItems="center">
+      <Grid container alignItems="center" columns={{ xs: 6, sm: 12 }}>
         <Grid item xs={6}>
-          <Stack pl={24} spacing={4}>
+          <Stack pl={{ xs: "5vw", md: "15vw" }} spacing={{ xs: 3, md: 4 }}>
             <Typography variant="h5">Our Capabilities</Typography>
-            <Stack spacing={4}>
+            <Stack spacing={{ xs: 2, md: 4 }}>
               {CAPABILITIES.map(({ title }, idx) => (
                 <Typography
-                  variant="h3"
+                  variant="h4"
                   key={idx}
                   sx={{
                     opacity: currIdx === idx ? 1 : 0.4,

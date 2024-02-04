@@ -25,7 +25,7 @@ const theme = createTheme({
           letterSpacing: "-2px",
         },
         h5: {
-          letterSpacing: "-1px",
+          letterSpacing: "-1.5px",
           lineHeight: 1.3,
         },
         h6: {
