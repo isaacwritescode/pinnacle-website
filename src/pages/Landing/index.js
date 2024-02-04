@@ -5,6 +5,7 @@ import Sponsors from "./Sponsors";
 import FAQ from "./FAQ";
 import Footer from "./Footer";
 import Testimonials from "./Testimonials";
+import Work from "./Work";
 
 const Landing = () => {
   return (
@@ -12,6 +13,7 @@ const Landing = () => {
       <Hero />
       <Sponsors />
       <Approach />
+      <Work />
       <Capabilities />
       <FAQ />
       <Testimonials />

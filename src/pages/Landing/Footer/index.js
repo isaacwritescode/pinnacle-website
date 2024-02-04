@@ -6,7 +6,6 @@ import {
   Stack,
   ThemeProvider,
   Typography,
-  createMuiTheme,
   createTheme,
 } from "@mui/material";
 import SOCIAL_LINKS from "./constants";
