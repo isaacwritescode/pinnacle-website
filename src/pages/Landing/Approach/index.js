@@ -15,9 +15,9 @@ const Approach = () => {
   const md = useMediaQuery(theme.breakpoints.up("md"));
   const [currItemIdx, setCurrItemIdx] = useState(0);
   return (
-    <Box width="100%" maxWidth={1000} mx="auto" pb={12}>
+    <Box width="100%" maxWidth={1000} mx="auto" pb={12} id="approach">
       <Box width={{ xs: "90%", lg: "100%" }} m="auto">
-        <Stack maxWidth={800} py={{ xs: 6, md: 12 }}>
+        <Stack maxWidth={800} pt={{ xs: 6, md: 12 }} pb={4}>
           <Typography variant="h5">Approach</Typography>
           <Typography variant={md ? "h3" : "h4"} lineHeight={1.4}>
             Our creative digital agency designs and develops bespoke websites

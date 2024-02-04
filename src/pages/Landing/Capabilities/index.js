@@ -29,6 +29,7 @@ const Capabilities = () => {
       overflow="hidden"
       pt={{ xs: 8, md: 0 }}
       sx={{ transition: "all ease 0.3s" }}
+      id="capabilities"
     >
       <Grid container alignItems="center" columns={{ xs: 6, sm: 12 }}>
         <Grid item xs={6}>

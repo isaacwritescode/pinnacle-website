@@ -24,4 +24,23 @@ const SOCIAL_LINKS = [
   },
 ];
 
-export default SOCIAL_LINKS;
+const QUICK_LINKS = [
+  {
+    href: "#work",
+    title: "Work",
+  },
+  {
+    href: "#capabilities",
+    title: "Capabilities",
+  },
+  {
+    href: "#approach",
+    title: "Approach",
+  },
+  {
+    href: "/contact",
+    title: "Contact",
+  },
+];
+
+export { SOCIAL_LINKS, QUICK_LINKS };

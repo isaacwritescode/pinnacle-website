@@ -10,6 +10,7 @@ import WORK from "./constants";
 import Card from "./Card";
 import { Masonry } from "@mui/lab";
 
+
 const Work = () => {
   const theme = useTheme();
   const darkTheme = createTheme({
@@ -21,7 +22,7 @@ const Work = () => {
   });
   return (
     <ThemeProvider theme={darkTheme}>
-      <Box bgcolor="#212123" pt={24} pb={12}>
+      <Box bgcolor="#212123" pt={24} pb={12} id="work">
         <Box position="relative" textAlign="center">
           <Typography variant="h1" color="text.primary">
             Work

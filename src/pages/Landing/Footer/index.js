@@ -3,12 +3,13 @@ import {
   Box,
   Button,
   Grid,
+  Link,
   Stack,
   ThemeProvider,
   Typography,
   createTheme,
 } from "@mui/material";
-import SOCIAL_LINKS from "./constants";
+import { SOCIAL_LINKS, QUICK_LINKS } from "./constants";
 
 const Footer = () => {
   // Define a custom theme
@@ -42,18 +43,14 @@ const Footer = () => {
                 <Typography variant="h6" color="text.primary">
                   QUICK LINKS
                 </Typography>
-                <Typography variant="h6" color="text.secondary">
-                  Work
-                </Typography>
-                <Typography variant="h6" color="text.secondary">
-                  Capabilities
-                </Typography>
-                <Typography variant="h6" color="text.secondary">
-                  Approach
-                </Typography>
-                <Typography variant="h6" color="text.secondary">
-                  Contact
-                </Typography>
+
+                {QUICK_LINKS.map(({ href, title }, idx) => (
+                  <Link href={href}>
+                    <Typography variant="h6" color="text.secondary">
+                      {title}
+                    </Typography>
+                  </Link>
+                ))}
               </Stack>
             </Grid>
             <Grid item xs={3}>
