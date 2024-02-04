@@ -19,7 +19,7 @@ const Approach = () => {
       <Box width={{ xs: "90%", lg: "100%" }} m="auto">
         <Stack maxWidth={800} py={{ xs: 6, md: 12 }}>
           <Typography variant="h5">Approach</Typography>
-          <Typography variant="h3" lineHeight={1.4}>
+          <Typography variant={md ? "h3" : "h4"} lineHeight={1.4}>
             Our creative digital agency designs and develops bespoke websites
             with{" "}
             <Box display="inline" color="primary.main">
