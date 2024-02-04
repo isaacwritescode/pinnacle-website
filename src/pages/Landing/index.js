@@ -4,6 +4,7 @@ import Hero from "./Hero";
 import Sponsors from "./Sponsors";
 import FAQ from "./FAQ";
 import Footer from "./Footer";
+import Testimonials from "./Testimonials";
 
 const Landing = () => {
   return (
@@ -13,6 +14,7 @@ const Landing = () => {
       <Approach />
       <Capabilities />
       <FAQ />
+      <Testimonials />
       <Footer />
     </>
   );
