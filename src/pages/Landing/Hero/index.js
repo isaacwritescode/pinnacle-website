@@ -10,7 +10,7 @@ const Hero = () => {
         overflow: "visible",
       }}
     >
-      <Box maxWidth={1000} mx="auto" pt={32} pb={48}>
+      <Box width={{ xs: "90%", md: "70%" }} mx="auto" pt={32} pb={48}>
         <Stack
           alignItems="center"
           spacing={2}
