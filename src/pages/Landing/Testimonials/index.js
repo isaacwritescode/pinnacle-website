@@ -5,6 +5,7 @@ import {
   ThemeProvider,
   Typography,
   createTheme,
+  useMediaQuery,
 } from "@mui/material";
 import Card from "./Card";
 import "react-slideshow-image/dist/styles.css";
@@ -14,6 +15,7 @@ import Marquee from "react-fast-marquee";
 const Testimonials = () => {
   // Define a custom theme
   const theme = useTheme();
+  const md = useMediaQuery(theme.breakpoints.up("md"));
   const darkTheme = createTheme({
     ...theme,
     palette: {
@@ -24,19 +26,30 @@ const Testimonials = () => {
   return (
     <ThemeProvider theme={darkTheme}>
       <Box bgcolor="#6B30BB" pb={16}>
-        <Stack textAlign="center" py={16}>
-          <Typography variant="h1" color="text.primary">
-            Testimonials
-          </Typography>
-          <Typography variant="body1" color="text.secondary">
-            See what our clients have to say about our services
-          </Typography>
-        </Stack>
-        <Marquee pauseOnHover pauseOnClick>
-          {TESTIMONIALS.map((item, idx) => (
-            <Card key={idx} {...item} />
-          ))}
-        </Marquee>
+        <Box width={{ xs: "90%", md: "70%" }} mx="auto">
+          <Stack textAlign="center" pt={16} pb={{ xs: 8, md: 16 }}>
+            <Typography variant={md ? "h1" : "h2"} color="text.primary">
+              Testimonials
+            </Typography>
+            <Typography variant="body1" color="text.secondary">
+              See what our clients have to say about our services
+            </Typography>
+          </Stack>
+          {md || (
+            <Stack spacing={2}>
+              {TESTIMONIALS.map((item, idx) => (
+                <Card key={idx} {...item} />
+              ))}
+            </Stack>
+          )}
+        </Box>
+        {md && (
+          <Marquee pauseOnHover pauseOnClick>
+            {TESTIMONIALS.map((item, idx) => (
+              <Card key={idx} {...item} />
+            ))}
+          </Marquee>
+        )}
       </Box>
     </ThemeProvider>
   );
