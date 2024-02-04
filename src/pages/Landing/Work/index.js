@@ -1,7 +1,6 @@
 import { useTheme } from "@emotion/react";
 import {
   Box,
-  Grid,
   ThemeProvider,
   Typography,
   createTheme,
