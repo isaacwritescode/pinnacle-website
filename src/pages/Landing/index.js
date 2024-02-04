@@ -6,10 +6,12 @@ import FAQ from "./FAQ";
 import Footer from "./Footer";
 import Testimonials from "./Testimonials";
 import Work from "./Work";
+import Navbar from "../../components/Navbar";
 
-const Landing = () => {
+const Landing = ({ userHasScrolled }) => {
   return (
     <>
+      <Navbar userHasScrolled={userHasScrolled} />
       <Hero />
       <Sponsors />
       <Approach />

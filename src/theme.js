@@ -4,8 +4,8 @@ const theme = createTheme({
   components: {
     MuiTypography: {
       styleOverrides: {
-        root:{
-            fontWeight: 500,
+        root: {
+          fontWeight: 500,
         },
         h1: {
           letterSpacing: "-4px",
@@ -39,16 +39,19 @@ const theme = createTheme({
         root: {
           textTransform: "none",
           borderRadius: 100,
-          boxShadow: "none"
+          boxShadow: "none",
         },
-        sizeLarge:{
-          padding: "24px 48px"
+        sizeLarge: {
+          padding: "24px 48px",
         },
-        sizeMedium:{
-          padding: "12px 32px"
-        }
+        sizeMedium: {
+          padding: "12px 32px",
+        },
+        sizeSmall: {
+          padding: "0px 16px",
+          height: 42,
+        },
       },
-      
     },
   },
   typography: {
@@ -60,6 +63,14 @@ const theme = createTheme({
       contrastText: "#744209",
       light: "#F8FFF5",
       main: "#FFB259",
+    },
+    secondary: {
+      main: "#ffffff",
+      contrastText: "#000000",
+    },
+    black: {
+      main: "#000000",
+      contrastText: "#ffffff",
     },
   },
 });

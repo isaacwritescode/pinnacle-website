@@ -29,7 +29,7 @@ export const TextView = ({ setCurrItemIdx }) => {
                   >
                     {"0" + (idx + 1) + "."}
                   </Typography>
-                  <Typography variant={md ? "h1" : "h2"} fontWeight={600}>
+                  <Typography variant={md ? "h2" : "h3"} fontWeight={600}>
                     {title}
                   </Typography>
                   <Typography

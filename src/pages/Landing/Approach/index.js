@@ -27,7 +27,7 @@ const Approach = () => {
             </Box>
           </Typography>
         </Stack>
-        <Grid container spacing={6} columns={{ md: 12 }}>
+        <Grid container spacing={8} columns={{ md: 12 }}>
           <Grid item md={6}>
             {md && <ImageView currItemIdx={currItemIdx} />}
           </Grid>
