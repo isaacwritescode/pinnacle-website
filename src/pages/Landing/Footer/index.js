@@ -23,11 +23,15 @@ const Footer = () => {
   return (
     <ThemeProvider theme={darkTheme}>
       <Box bgcolor="#212123">
-        <Box width={{ xs: "90%", md: "70%" }} mx="auto" py={24}>
+        <Box width={{ xs: "90%", md: "70%" }} mx="auto" py={{ xs: 8, md: 24 }}>
           <Grid container columns={{ xs: 3, sm: 6, lg: 12 }} spacing={12}>
             <Grid item xs={3}>
               <Stack maxWidth={300}>
-                <img src="/images/logos/logo+wordmark.svg" width="100%" alt="pinnacle-logo" />
+                <img
+                  src="/images/logos/logo+wordmark.svg"
+                  width="100%"
+                  alt="pinnacle-logo"
+                />
                 <Typography variant="body2" color="text.secondary">
                   ©2024 Pinnacle Brand Solution. All rights reserved.
                 </Typography>
