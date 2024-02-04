@@ -71,16 +71,25 @@ const Footer = () => {
                   </Typography>
                   <Stack direction="row" spacing={2}>
                     {SOCIAL_LINKS.map(({ icon, url }, idx) => (
-                      <Stack
-                        key={idx}
-                        color="white"
-                        border={1}
-                        p={1}
-                        borderColor="#ffffff20"
-                        borderRadius={100}
-                      >
-                        {icon}
-                      </Stack>
+                      <Link href={url}>
+                        <Stack
+                          key={idx}
+                          color="white"
+                          p={1}
+                          border={2}
+                          borderColor="#ffffff20"
+                          borderRadius={100}
+                          sx={{
+                            transition: "all ease 0.3s",
+                            cursor: "pointer",
+                            "&:hover": {
+                              borderColor: "white",
+                            },
+                          }}
+                        >
+                          {icon}
+                        </Stack>
+                      </Link>
                     ))}
                   </Stack>
                 </Stack>
