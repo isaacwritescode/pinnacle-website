@@ -29,7 +29,12 @@ const Testimonials = () => {
         <Box width={{ xs: "90%", md: "70%" }} mx="auto">
           <Stack textAlign="center" pt={24} pb={{ xs: 8, md: 16 }}>
             <Box position="relative" textAlign="center">
-              <Typography variant="h1" color="text.primary">
+              <Typography
+                variant="h1"
+                data-sal="slide-up"
+                data-sal-delay="100"
+                color="text.primary"
+              >
                 Reviews
               </Typography>
               <Typography
