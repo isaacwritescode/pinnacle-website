@@ -25,7 +25,7 @@ const Testimonials = () => {
   });
   return (
     <ThemeProvider theme={darkTheme}>
-      <Box bgcolor="#6B30BB" pb={16}>
+      <Box bgcolor="#6B30BB" pb={16} overflow="hidden">
         <Box width={{ xs: "90%", md: "70%" }} mx="auto">
           <Stack textAlign="center" pt={24} pb={{ xs: 8, md: 16 }}>
             <Box position="relative" textAlign="center">
@@ -60,7 +60,9 @@ const Testimonials = () => {
           {md || (
             <Stack spacing={4}>
               {TESTIMONIALS.map((item, idx) => (
-                <Card key={idx} {...item} />
+                <Box key={idx} data-sal="slide-up" data-sal-delay={idx * 100}>
+                  <Card {...item} />
+                </Box>
               ))}
             </Stack>
           )}
@@ -68,7 +70,9 @@ const Testimonials = () => {
         {md && (
           <Marquee pauseOnHover pauseOnClick>
             {TESTIMONIALS.map((item, idx) => (
-              <Card key={idx} {...item} />
+              <Box key={idx} mx={2}>
+                <Card {...item} />
+              </Box>
             ))}
           </Marquee>
         )}

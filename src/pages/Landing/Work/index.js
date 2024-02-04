@@ -1,10 +1,5 @@
 import { useTheme } from "@emotion/react";
-import {
-  Box,
-  ThemeProvider,
-  Typography,
-  createTheme,
-} from "@mui/material";
+import { Box, ThemeProvider, Typography, createTheme } from "@mui/material";
 import WORK from "./constants";
 import Card from "./Card";
 import { Masonry } from "@mui/lab";
@@ -20,7 +15,7 @@ const Work = () => {
   });
   return (
     <ThemeProvider theme={darkTheme}>
-      <Box bgcolor="#212123" pt={24} pb={12} id="work">
+      <Box bgcolor="#212123" pt={24} pb={12} id="work" overflow="hidden">
         <Box position="relative" textAlign="center">
           <Typography
             variant="h1"
@@ -58,12 +53,13 @@ const Work = () => {
           <Masonry columns={{ xs: 1, sm: 2 }}>
             {WORK.map((item, idx) => (
               <Box
+                key={idx}
                 data-sal="slide-up"
                 data-sal-delay={idx * 100}
                 px={{ sm: 1, md: 2 }}
                 pt={idx === 1 && 4}
               >
-                <Card key={idx} {...item} />
+                <Card {...item} />
               </Box>
             ))}
           </Masonry>

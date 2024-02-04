@@ -16,7 +16,6 @@ const Card = ({ name, designation, body, avatar }) => {
       <Stack
         bgcolor="white"
         width={{ xs: "100%", md: 400 }}
-        mx={2}
         boxSizing="border-box"
         borderRadius={6}
         p={4}
