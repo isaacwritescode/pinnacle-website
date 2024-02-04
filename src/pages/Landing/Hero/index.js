@@ -18,7 +18,7 @@ const Hero = () => {
           mx="auto"
           textAlign="center"
         >
-          <Typography variant="h1" color="white">
+          <Typography variant="h2" color="white">
             Reach your pinnacle
           </Typography>
           <Typography variant="body1" color="white">

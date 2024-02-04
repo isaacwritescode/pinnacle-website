@@ -15,11 +15,11 @@ const theme = createTheme({
         h2: {
           letterSpacing: "-4px",
           lineHeight: 1.1,
-          fontSize: "56px",
+          fontSize: "64px",
         },
         h3: {
           letterSpacing: "-3px",
-          fontSize: "36px",
+          fontSize: "48px",
         },
         h4: {
           letterSpacing: "-2px",

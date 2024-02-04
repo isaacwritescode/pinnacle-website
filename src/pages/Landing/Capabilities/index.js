@@ -32,7 +32,7 @@ const Capabilities = () => {
             <Stack spacing={4}>
               {CAPABILITIES.map(({ title }, idx) => (
                 <Typography
-                  variant="h2"
+                  variant="h3"
                   key={idx}
                   sx={{
                     opacity: currIdx === idx ? 1 : 0.4,
