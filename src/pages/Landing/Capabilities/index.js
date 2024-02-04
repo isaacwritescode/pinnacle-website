@@ -1,11 +1,14 @@
-import { Box, Grid, Stack, Typography } from "@mui/material";
+import { Box, Grid, Stack, Typography, useMediaQuery } from "@mui/material";
 import CAPABILITIES from "./constants";
 import { useEffect, useState } from "react";
 import ProgressBar from "react-customizable-progressbar";
+import { useTheme } from "@emotion/react";
 
 const Capabilities = () => {
   const [currIdx, setCurrIdx] = useState(0);
   const [value, setValue] = useState(0);
+  const theme = useTheme();
+  const md = useMediaQuery(theme.breakpoints.up("md"));
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -25,7 +28,7 @@ const Capabilities = () => {
       height={{ xs: "auto", md: "100vh" }}
       overflow="hidden"
       pt={{ xs: 8, md: 0 }}
-      sx={{transition: "all ease 0.3s"}}
+      sx={{ transition: "all ease 0.3s" }}
     >
       <Grid container alignItems="center" columns={{ xs: 6, sm: 12 }}>
         <Grid item xs={6}>
@@ -34,7 +37,7 @@ const Capabilities = () => {
             <Stack spacing={{ xs: 2, md: 4 }}>
               {CAPABILITIES.map(({ title }, idx) => (
                 <Typography
-                  variant="h4"
+                  variant={md ? "h3" : "h4"}
                   key={idx}
                   sx={{
                     opacity: currIdx === idx ? 1 : 0.4,
