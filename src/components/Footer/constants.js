@@ -37,10 +37,6 @@ const QUICK_LINKS = [
     href: "#approach",
     title: "Approach",
   },
-  {
-    href: "/contact",
-    title: "Contact",
-  },
 ];
 
 export { SOCIAL_LINKS, QUICK_LINKS };

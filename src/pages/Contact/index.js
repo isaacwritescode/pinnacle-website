@@ -51,8 +51,15 @@ const Contact = () => {
         >
           <Grid item xs={6}>
             <Stack spacing={2} pb={4}>
-              <Typography variant="h2">Would love to hear from you</Typography>
-              <Typography variant="body2" color="text.secondary">
+              <Typography data-sal="slide-up" data-sal-delay="100" variant="h2">
+                Would love to hear from you
+              </Typography>
+              <Typography
+                data-sal="slide-up"
+                data-sal-delay="200"
+                variant="body2"
+                color="text.secondary"
+              >
                 We’re here to help. Drop your requirements in detail here so get
                 back asap!
               </Typography>
@@ -61,7 +68,7 @@ const Contact = () => {
                   <Link href={url}>
                     <Stack
                       data-sal="slide-up"
-                      data-sal-delay={idx * 100}
+                      data-sal-delay={idx * 100 + 300}
                       key={idx}
                       p={1}
                       border={2}
@@ -87,6 +94,8 @@ const Contact = () => {
               my={8}
               maxWidth={900}
               p={8}
+              data-sal="slide-up"
+              data-sal-delay="300"
               sx={{
                 bgcolor: { xs: "#00000010", md: "#ffffff10" },
                 backdropFilter: "blur(3em)",

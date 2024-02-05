@@ -82,14 +82,16 @@ const Navbar = ({ isMenuVisible, userHasScrolled, setIsMenuVisible }) => {
               data-sal="slide-up"
               data-sal-delay="100"
             >
-              <Button
-                variant="outlined"
-                size="small"
-                color={"secondary"}
-                sx={{ filter: condition && "grayscale(1) invert(1)" }}
-              >
-                Contact
-              </Button>
+              <Link href="contact">
+                <Button
+                  variant="outlined"
+                  size="small"
+                  color={"secondary"}
+                  sx={{ filter: condition && "grayscale(1) invert(1)" }}
+                >
+                  Contact
+                </Button>
+              </Link>
             </Box>
             <Box
               display={{ xs: "block", md: "none" }}
