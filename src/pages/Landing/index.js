@@ -52,7 +52,7 @@ const Landing = () => {
           position: "fixed",
           bottom: 24,
           right: 24,
-          zIndex: 99,
+          zIndex: 98,
         }}
       >
         <Button variant="contained" size="large">

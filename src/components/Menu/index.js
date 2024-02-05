@@ -24,7 +24,7 @@ const Menu = ({ setIsMenuVisible }) => {
             left: 0,
             bottom: 0,
             right: 0,
-            zIndex: 98,
+            zIndex: 99,
             animation: "pop ease 0.3s",
           }}
         >
