@@ -60,7 +60,7 @@ const Contact = () => {
                 variant="body2"
                 color="text.secondary"
               >
-                We’re here to help. Drop your requirements in detail here so get
+                We’re here to help. Drop your requirements in detail here & we'll get
                 back asap!
               </Typography>
               <Stack direction="row" spacing={2}>
