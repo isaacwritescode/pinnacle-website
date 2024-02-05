@@ -15,7 +15,13 @@ const Work = () => {
   });
   return (
     <ThemeProvider theme={darkTheme}>
-      <Box bgcolor="#212123" pt={24} pb={12} id="work" overflow="hidden">
+      <Box
+        bgcolor="#212123"
+        pt={{ xs: 20, md: 24 }}
+        pb={{ xs: 8, md: 12 }}
+        id="work"
+        overflow="hidden"
+      >
         <Box position="relative" textAlign="center">
           <Typography
             variant="h1"

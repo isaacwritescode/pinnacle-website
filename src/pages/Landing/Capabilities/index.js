@@ -30,7 +30,12 @@ const Capabilities = () => {
       id="capabilities"
     >
       <Stack justifyContent="center" width={{ xs: "90%", md: "70%" }} mx="auto">
-        <Grid container alignItems="center" py={16} columns={{ xs: 6, sm: 12 }}>
+        <Grid
+          container
+          alignItems="center"
+          py={{ xs: 8, md: 16 }}
+          columns={{ xs: 6, sm: 12 }}
+        >
           <Grid item xs={6}>
             <Stack spacing={{ xs: 3, md: 4 }}>
               <Typography data-sal="slide-up" data-sal-delay="100" variant="h5">

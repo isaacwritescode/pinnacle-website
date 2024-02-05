@@ -22,7 +22,12 @@ export const TextView = ({ setCurrItemIdx }) => {
                 spacing={4}
                 height={{ xs: "auto", md: "100vh" }}
               >
-                <Stack ref={ref} spacing={2}>
+                <Stack
+                  ref={ref}
+                  spacing={2}
+                  data-sal="fade"
+                  data-sal-delay="100"
+                >
                   <Typography
                     variant={md ? "h1" : "h2"}
                     fontWeight={600}

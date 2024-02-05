@@ -17,7 +17,7 @@ const Approach = () => {
   return (
     <Box width="100%" maxWidth={1000} mx="auto" pb={12} id="approach">
       <Box width={{ xs: "90%", lg: "100%" }} m="auto">
-        <Stack maxWidth={800} pt={{ xs: 6, md: 12 }} pb={4}>
+        <Stack maxWidth={800} pt={{ xs: 8, md: 12 }} pb={2}>
           <Typography data-sal="slide-up" data-sal-delay="100" variant="h5">
             Approach
           </Typography>
