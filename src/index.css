@@ -42,14 +42,20 @@ body {
   width: 100%;
   max-width: 2560px;
   margin: auto;
-  overflow-x: hidden;
 }
 
 .fade-in {
   visibility: visible !important;
   opacity: 1 !important;
   transform: scale(1) !important;
-  transition: all ease 0.5s;
+  transition: all ease 0.3s;
+}
+
+.fade-out {
+  visibility: hidden !important;
+  opacity: 0 !important;
+  transform: scale(0) !important;
+  transition: all ease 0.3s;
 }
 
 [data-sal|="fade-up"] {
