@@ -33,15 +33,21 @@ const Navbar = ({ isMenuVisible, userHasScrolled, setIsMenuVisible }) => {
             direction="row"
             alignItems="center"
           >
-            <Box data-sal="slide-up" data-sal-delay="100">
-              <img
-                src="/images/logos/logo+wordmark-white.svg"
-                alt="pinnacle-logo"
-                height={48}
-                style={{
-                  filter: condition && "grayscale(1) invert(1)",
-                }}
-              />
+            <Box
+              onClick={() => setIsMenuVisible(false)}
+              data-sal="slide-up"
+              data-sal-delay="100"
+            >
+              <Link href="/">
+                <img
+                  src="/images/logos/logo+wordmark-white.svg"
+                  alt="pinnacle-logo"
+                  height={48}
+                  style={{
+                    filter: condition && "grayscale(1) invert(1)",
+                  }}
+                />
+              </Link>
             </Box>
             <Box
               display={{ xs: "none", md: "block" }}
@@ -126,15 +132,21 @@ const Navbar = ({ isMenuVisible, userHasScrolled, setIsMenuVisible }) => {
             direction="row"
             alignItems="center"
           >
-            <Box data-sal="slide-up" data-sal-delay="100">
-              <img
-                src="/images/logos/logo+wordmark-white.svg"
-                alt="pinnacle-logo"
-                height={48}
-                style={{
-                  filter: "grayscale(1) invert(1)",
-                }}
-              />
+            <Box
+              onClick={() => setIsMenuVisible(false)}
+              data-sal="slide-up"
+              data-sal-delay="100"
+            >
+              <Link href="/">
+                <img
+                  src="/images/logos/logo+wordmark-white.svg"
+                  alt="pinnacle-logo"
+                  height={48}
+                  style={{
+                    filter: "grayscale(1) invert(1)",
+                  }}
+                />
+              </Link>
             </Box>
             <Box
               display={{ xs: "none", md: "block" }}
