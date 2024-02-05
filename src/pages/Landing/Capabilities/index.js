@@ -38,8 +38,17 @@ const Capabilities = () => {
               </Typography>
               <Stack spacing={{ xs: 2, md: 4 }}>
                 {CAPABILITIES.map(({ title }, idx) => (
-                  <Box data-sal="zoom-out" data-sal-delay={idx * 100} key={idx}>
+                  <Box
+                    data-sal="zoom-out"
+                    data-sal-delay={idx * 100}
+                    key={idx}
+                    sx={{ cursor: "pointer" }}
+                  >
                     <Typography
+                      onClick={() => {
+                        setValue(0);
+                        setCurrIdx(idx);
+                      }}
                       variant={md ? "h3" : "h4"}
                       sx={{
                         opacity: currIdx === idx ? 1 : 0.4,
