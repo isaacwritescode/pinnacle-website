@@ -41,7 +41,7 @@ const Contact = () => {
           left={-200}
           zIndex={-1}
         >
-          <img src="/images/contact/spline.png" width="90%" />
+          <img alt="spline" src="/images/contact/spline.png" width="90%" />
         </Box>
         <Grid
           spacing={{ xs: 0, md: 24 }}

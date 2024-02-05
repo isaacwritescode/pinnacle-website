@@ -1,21 +1,12 @@
-import {
-  EmailOutlined,
-  FacebookOutlined,
-  Instagram,
-  LinkedIn,
-} from "@mui/icons-material";
+import { EmailOutlined, Phone, WhatsApp } from "@mui/icons-material";
 
 const SOCIAL_LINKS = [
   {
-    icon: <Instagram />,
+    icon: <WhatsApp />,
     url: "",
   },
   {
-    icon: <LinkedIn />,
-    url: "",
-  },
-  {
-    icon: <FacebookOutlined />,
+    icon: <Phone />,
     url: "",
   },
   {
