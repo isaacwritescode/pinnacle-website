@@ -9,6 +9,7 @@ import "sal.js/dist/sal.css";
 
 function App() {
   const { pathname } = useLocation();
+  const [isMenuVisible, setIsMenuVisible] = useState(false);
   const [userHasScrolled, setUserHasScrolled] = useState(false);
 
   useEffect(() => {
@@ -18,9 +19,12 @@ function App() {
         : setUserHasScrolled(true);
     };
 
+    if (isMenuVisible) document.body.style.overflow = "hidden";
+    else document.body.style.overflow = "auto";
+
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
-  }, []);
+  }, [isMenuVisible]);
 
   useEffect(() => {
     sal({ threshold: 0.3 });
@@ -29,7 +33,16 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <Routes>
-        <Route path="/" element={<Layout userHasScrolled={userHasScrolled} />}>
+        <Route
+          path="/"
+          element={
+            <Layout
+              isMenuVisible={isMenuVisible}
+              setIsMenuVisible={setIsMenuVisible}
+              userHasScrolled={userHasScrolled}
+            />
+          }
+        >
           <Route index element={<Landing />} />
         </Route>
       </Routes>
