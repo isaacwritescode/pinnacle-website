@@ -6,6 +6,7 @@ import { Route, Routes, useLocation } from "react-router-dom";
 import Layout from "./layout";
 import sal from "sal.js";
 import "sal.js/dist/sal.css";
+import Contact from "./pages/Contact";
 
 function App() {
   const { pathname } = useLocation();
@@ -44,6 +45,7 @@ function App() {
           }
         >
           <Route index element={<Landing />} />
+          <Route path="/contact" element={<Contact />} />
         </Route>
       </Routes>
     </ThemeProvider>
