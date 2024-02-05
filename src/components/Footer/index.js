@@ -88,7 +88,7 @@ const Footer = () => {
                   </Typography>
                   <Stack direction="row" spacing={2}>
                     {SOCIAL_LINKS.map(({ icon, url }, idx) => (
-                      <Link href={url}>
+                      <Link href={url} target="_blank">
                         <Stack
                           data-sal="slide-up"
                           data-sal-delay={idx * 100}
