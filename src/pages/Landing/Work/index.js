@@ -31,7 +31,7 @@ const Work = () => {
             sx={{
               fontSize: 240,
               color: "transparent" /* Make the text color transparent */,
-              "-webkit-text-stroke": "1px #ffffff10",
+              "-webkit-text-stroke": "1px #ffffff20",
               position: "absolute",
               left: "50%",
               transform: "translateX(-50%)",
