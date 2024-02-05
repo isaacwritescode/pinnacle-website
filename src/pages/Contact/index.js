@@ -26,11 +26,12 @@ const Contact = () => {
   return (
     <Box sx={{ overflowY: "hidden" }}>
       <Box
-        py={8}
+        py={{ xs: 16, md: 8 }}
         boxSizing="border-box"
         maxWidth={1000}
         mx="auto"
         position="relative"
+        width={{ xs: "90%", md: "100%" }}
         height={{ xs: "auto", md: "100vh" }}
       >
         <Box
@@ -43,7 +44,7 @@ const Contact = () => {
           <img src="/images/contact/spline.png" width="90%" />
         </Box>
         <Grid
-          spacing={24}
+          spacing={{ xs: 0, md: 24 }}
           container
           columns={{ xs: 6, md: 12 }}
           alignItems="center"
@@ -87,7 +88,7 @@ const Contact = () => {
               maxWidth={900}
               p={8}
               sx={{
-                bgcolor: "#ffffff10",
+                bgcolor: { xs: "#00000010", md: "#ffffff10" },
                 backdropFilter: "blur(3em)",
               }}
             >
