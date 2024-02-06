@@ -8,6 +8,8 @@ export const TextView = ({ setCurrItemIdx }) => {
   const md = useMediaQuery(theme.breakpoints.up("md"));
   return (
     <Stack spacing={{ xs: 6, md: 0 }}>
+      <Typography variant="h5">Approach</Typography>
+
       {FEATURES.map(({ title, desc, image }, idx) => (
         <InView
           key={idx}

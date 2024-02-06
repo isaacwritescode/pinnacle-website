@@ -1,4 +1,4 @@
-import { Box } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import { Stack } from "@mui/system";
 import { FEATURES } from "../constants";
 
@@ -16,6 +16,10 @@ export const ImageView = ({ currItemIdx }) => {
         justifyContent="center"
         sx={{ position: "relative", height: "calc(100vh - 80px)" }}
       >
+        <Box position="absolute" top={36}>
+          <Typography variant="h5">Approach</Typography>
+        </Box>
+
         {FEATURES.map(({ image }, idx) => (
           <img
             src={image}

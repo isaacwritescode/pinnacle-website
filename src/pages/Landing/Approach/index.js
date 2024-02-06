@@ -18,19 +18,17 @@ const Approach = () => {
     <Box width="100%" maxWidth={1000} mx="auto" pb={12} id="approach">
       <Box width={{ xs: "90%", lg: "100%" }} m="auto">
         <Stack maxWidth={800} pt={{ xs: 8, md: 12 }} pb={2}>
-          <Typography data-sal="slide-up" data-sal-delay="100" variant="h5">
-            Approach
-          </Typography>
           <Typography
             data-sal="slide-up"
             data-sal-delay="200"
             variant={md ? "h3" : "h4"}
             lineHeight={1.4}
           >
-            Our creative digital agency designs and develops bespoke websites
-            with{" "}
+            Build and elevate your business with a distinctive strategy that
+            aligns with your vision and creative content that consistently
+            converts, leading to{" "}
             <Box display="inline" color="primary.main">
-              three things in mind;
+              increased reach and revenue.
             </Box>
           </Typography>
         </Stack>
