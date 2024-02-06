@@ -17,16 +17,16 @@ const SOCIAL_LINKS = [
 
 const QUICK_LINKS = [
   {
-    href: "#work",
-    title: "Work",
+    href: "#approach",
+    title: "Approach",
   },
   {
     href: "#capabilities",
     title: "Capabilities",
   },
   {
-    href: "#approach",
-    title: "Approach",
+    href: "#work",
+    title: "Work",
   },
 ];
 
