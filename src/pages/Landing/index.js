@@ -5,7 +5,7 @@ import Sponsors from "./Sponsors";
 import FAQ from "./FAQ";
 import Testimonials from "./Testimonials";
 import Work from "./Work";
-import { Box, Button } from "@mui/material";
+import { Box, Button, Link } from "@mui/material";
 import ReactVisibilitySensor from "react-visibility-sensor";
 import Footer from "../../components/Footer";
 import { useState } from "react";
@@ -55,9 +55,11 @@ const Landing = () => {
           zIndex: 98,
         }}
       >
-        <Button variant="contained" size="large">
-          Start a project
-        </Button>
+        <Link href="/contact">
+          <Button variant="contained" size="large">
+            Start a project
+          </Button>
+        </Link>
       </Box>
     </>
   );

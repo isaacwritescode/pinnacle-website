@@ -112,9 +112,11 @@ const Footer = () => {
                     ))}
                   </Stack>
                 </Stack>
-                <Button variant="contained" size="large">
-                  Start a project
-                </Button>
+                <Link href="/contact">
+                  <Button variant="contained" size="large">
+                    Start a project
+                  </Button>
+                </Link>
               </Stack>
             </Grid>
           </Grid>

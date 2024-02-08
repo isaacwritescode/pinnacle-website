@@ -1,5 +1,12 @@
 import { useTheme } from "@emotion/react";
-import { Box, Button, Stack, Typography, useMediaQuery } from "@mui/material";
+import {
+  Box,
+  Button,
+  Link,
+  Stack,
+  Typography,
+  useMediaQuery,
+} from "@mui/material";
 import { Parallax } from "react-scroll-parallax";
 import { ParallaxProvider } from "react-scroll-parallax";
 
@@ -45,9 +52,11 @@ const Hero = () => {
             potential, and we're confident that we can make it{" "}
           </Typography>
           <Box pt={4} data-sal="zoom-out" data-sal-delay="500">
-            <Button variant="contained" size="medium">
-              Start a project
-            </Button>
+            <Link href="/contact">
+              <Button variant="contained" size="medium">
+                Start a project
+              </Button>
+            </Link>
           </Box>
         </Stack>
       </Box>
