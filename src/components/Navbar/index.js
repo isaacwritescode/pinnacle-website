@@ -41,12 +41,9 @@ const Navbar = ({ isMenuVisible, userHasScrolled, setIsMenuVisible }) => {
             >
               <Link href="/">
                 <img
-                  src="/images/logos/logo+wordmark-white.svg"
+                  src={condition ? "/images/logos/logo-color-black.svg": "/images/logos/logo-color-free.svg"}
                   alt="pinnacle-logo"
                   height={48}
-                  style={{
-                    filter: condition && "grayscale(1) invert(1)",
-                  }}
                 />
               </Link>
             </Box>
@@ -142,12 +139,9 @@ const Navbar = ({ isMenuVisible, userHasScrolled, setIsMenuVisible }) => {
             >
               <Link href="/">
                 <img
-                  src="/images/logos/logo+wordmark-white.svg"
+                  src="/images/logos/logo-color-black.svg"
                   alt="pinnacle-logo"
                   height={48}
-                  style={{
-                    filter: "grayscale(1) invert(1)",
-                  }}
                 />
               </Link>
             </Box>
