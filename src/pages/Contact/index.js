@@ -1,6 +1,10 @@
 import {
   Box,
   Button,
+  Checkbox,
+  Chip,
+  FormControlLabel,
+  FormGroup,
   Grid,
   Stack,
   TextField,
@@ -11,6 +15,7 @@ import {
 import { SOCIAL_LINKS } from "../../components/Footer/constants";
 import { Link } from "react-router-dom";
 import { useTheme } from "@emotion/react";
+import { useState } from "react";
 
 const Contact = () => {
   const currTheme = useTheme();
@@ -21,12 +26,28 @@ const Contact = () => {
         main: "#000000",
         contrastText: "#ffffff",
       },
+      tertiary: {
+        main: "#511A89",
+        contrastText: "#ffffff",
+      },
     },
   });
+
+  const [branding, setBranding] = useState(false);
+  const [webDesign, setWebDesign] = useState(false);
+  const [ecommerce, setEcommerce] = useState(false);
+  const [digitalMarketting, setDigitalMarketting] = useState(false);
+
   return (
     <Box sx={{ overflowY: "hidden" }}>
+      <Checkbox
+        checked={branding}
+        name="branding"
+        inputProps={{ "aria-label": "controlled" }}
+        sx={{ opacity: 0, position: "absolute" }}
+      />
       <Box
-        py={{ xs: 16, md: 8 }}
+        py={{ xs: 16, md: 2 }}
         boxSizing="border-box"
         maxWidth={1000}
         mx="auto"
@@ -34,7 +55,7 @@ const Contact = () => {
         width={{ xs: "90%", md: "100%" }}
         height={{ xs: "auto", md: "100vh" }}
       >
-        <Box
+        {/* <Box
           display={{ xs: "none", md: "block" }}
           position="absolute"
           bottom={-520}
@@ -42,7 +63,7 @@ const Contact = () => {
           zIndex={-1}
         >
           <img alt="spline" src="/images/contact/spline.png" width="90%" />
-        </Box>
+        </Box> */}
         <Grid
           spacing={{ xs: 0, md: 24 }}
           container
@@ -50,9 +71,9 @@ const Contact = () => {
           alignItems="center"
         >
           <Grid item xs={6}>
-            <Stack spacing={2} pb={4}>
+            <Stack spacing={2}>
               <Typography data-sal="slide-up" data-sal-delay="100" variant="h2">
-                Would love to hear from you
+                Ready to boost your brand's success?
               </Typography>
               <Typography
                 data-sal="slide-up"
@@ -60,8 +81,10 @@ const Contact = () => {
                 variant="body2"
                 color="text.secondary"
               >
-                We’re here to help. Drop your requirements in detail here & we'll get
-                back asap!
+                Reach out to us today and let's start turning your marketing
+                dreams into reality. Fill out the form below, and we'll be in
+                touch shortly to discuss how we can elevate your business to new
+                heights
               </Typography>
               <Stack direction="row" spacing={2}>
                 {SOCIAL_LINKS.map(({ icon, url }, idx) => (
@@ -97,8 +120,10 @@ const Contact = () => {
               data-sal="slide-up"
               data-sal-delay="300"
               sx={{
-                bgcolor: { xs: "#00000010", md: "#ffffff10" },
+                bgcolor: { xs: "#00000010", md: "transparent" },
                 backdropFilter: "blur(3em)",
+                border: 1,
+                borderColor: "grey.300",
               }}
             >
               <form name="contact" method="POST" data-netlify="true">
@@ -128,19 +153,73 @@ const Contact = () => {
                       variant="standard"
                       required
                     />
+                    <Box>
+                      <Typography varian="body2" color="text.secondary">
+                        Services
+                      </Typography>
+                      <Stack mt={1} direction="row" gap={1} flexWrap="wrap">
+                        <Chip
+                          color="tertiary"
+                          variant={branding ? "filled" : "outlined"}
+                          onClick={() => setBranding(!branding)}
+                          label="Branding"
+                        />
+                        <Chip
+                          color="tertiary"
+                          variant={webDesign ? "filled" : "outlined"}
+                          onClick={() => setWebDesign(!webDesign)}
+                          label="Web Design"
+                        />
+                        <Chip
+                          color="tertiary"
+                          variant={ecommerce ? "filled" : "outlined"}
+                          onClick={() => setEcommerce(!ecommerce)}
+                          label="Ecommerce"
+                        />
+                        <Chip
+                          color="tertiary"
+                          variant={digitalMarketting ? "filled" : "outlined"}
+                          onClick={() =>
+                            setDigitalMarketting(!digitalMarketting)
+                          }
+                          label="Digital Marketting"
+                        />
+                      </Stack>
+                    </Box>
+                    {/* <FormGroup>
+                      <FormControlLabel
+                        control={<Checkbox name="branding" />}
+                        label="Branding"
+                      />
+                      <FormControlLabel
+                        control={<Checkbox name="branding" />}
+                        label="Web Design"
+                      />
+                      <FormControlLabel
+                        control={<Checkbox name="branding" />}
+                        label="Ecommerce"
+                      />
+                      <FormControlLabel
+                        control={<Checkbox name="branding" />}
+                        label="Digital Marketting"
+                      />
+                    </FormGroup> */}
                     <TextField
-                      label="Message (Optional)"
-                      name="message"
-                      rows={3}
+                      label="How did you hear from us? (Optional)"
+                      name="referral-source"
                       variant="standard"
-                      multiline
                     />
                   </ThemeProvider>
                   <Button
                     type="submit"
                     variant="contained"
                     size="large"
-                    sx={{ width: "fit-content" }}
+                    color="tertiary"
+                    sx={{
+                      width: {
+                        md: "fit-content",
+                      },
+                    }}
                   >
                     Send message
                   </Button>

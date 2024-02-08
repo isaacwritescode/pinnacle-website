@@ -68,6 +68,10 @@ const theme = createTheme({
       main: "#ffffff",
       contrastText: "#000000",
     },
+    tertiary: {
+      main: "#511A89",
+      contrastText: "#ffffff",
+    },
     black: {
       main: "#000000",
       contrastText: "#ffffff",

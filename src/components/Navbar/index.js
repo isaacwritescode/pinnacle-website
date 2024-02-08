@@ -19,7 +19,8 @@ const Navbar = ({ isMenuVisible, userHasScrolled, setIsMenuVisible }) => {
       <Box
         position="fixed"
         top={0}
-        width="100%"
+        left={0}
+        right={0}
         zIndex={999}
         bgcolor={condition ? "white" : "transparent"}
         sx={{
@@ -27,7 +28,7 @@ const Navbar = ({ isMenuVisible, userHasScrolled, setIsMenuVisible }) => {
           boxShadow: condition && "0 0 50px rgb(0, 0, 0, 0.2)",
         }}
       >
-        <Box width={{ xs: "90%", md: "70%" }} m="auto" py={1}>
+        <Box width={{ xs: "90%", md: "70%" }} mx="auto" py={1}>
           <Stack
             justifyContent="space-between"
             direction="row"
