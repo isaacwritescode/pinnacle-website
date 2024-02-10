@@ -5,7 +5,7 @@ const CAPABILITIES = [
     bgColor: "#FADDE4",
   },
   {
-    title: "Branding",
+    title: "Branding & Strategy",
     thumbnail: "/images/capabilities/branding.png",
     bgColor: "#DDF1FA",
   },
