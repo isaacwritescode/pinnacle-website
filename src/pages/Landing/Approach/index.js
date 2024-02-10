@@ -26,11 +26,10 @@ const Approach = () => {
               variant={md ? "h3" : "h4"}
               lineHeight={1.4}
             >
-              Build and elevate your business with a distinctive strategy that
-              aligns with your vision and creative content that consistently
-              converts, leading to{" "}
+              Elevate your business with a unique strategy and compelling
+              content that drives growth,
               <Box display="inline" color="primary.main">
-                increased reach and revenue.
+                expanding your reach and revenue.
               </Box>
             </Typography>
           </Stack>
