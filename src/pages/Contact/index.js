@@ -4,6 +4,7 @@ import {
   Checkbox,
   Chip,
   Grid,
+  Link,
   Stack,
   TextField,
   ThemeProvider,
@@ -11,7 +12,6 @@ import {
   createTheme,
 } from "@mui/material";
 import { SOCIAL_LINKS } from "../../components/Footer/constants";
-import { Link } from "react-router-dom";
 import { useTheme } from "@emotion/react";
 import { useState } from "react";
 
