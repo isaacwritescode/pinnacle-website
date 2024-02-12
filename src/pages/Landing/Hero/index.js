@@ -19,14 +19,14 @@ const Hero = () => {
         <Box position="absolute" top={0} zIndex={-1}>
           <img src="/images/hero/bg.svg" alt="background" width="100%" />
         </Box>
-        <Box position="absolute" top={-100} zIndex={-1}>
-          <Parallax speed={-10}>
-            <img src="/images/hero/moon.svg" alt="moon" width="100%" />
+        <Box position="absolute" top={0} zIndex={-1}>
+          <Parallax speed={-50}>
+            <img src="/images/hero/mountains.svg" alt="mountain with hills" width="100%" />
           </Parallax>
         </Box>
-        <Box position="absolute" top={400} zIndex={-1}>
+        <Box position="absolute" top={0} zIndex={-1}>
           <Parallax speed={-20}>
-            <img src="/images/hero/mountains-hills.svg" alt="mountain with hills" width="100%" />
+            <img src="/images/hero/hills.svg" alt="mountain with hills" width="100%" />
           </Parallax>
         </Box>
       </ParallaxProvider>

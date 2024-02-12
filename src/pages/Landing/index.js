@@ -45,7 +45,6 @@ const Landing = () => {
       >
         <Footer />
       </ReactVisibilitySensor>
-
       <Box
         className={condition ? "fade-in" : "fade-out"}
         sx={{
