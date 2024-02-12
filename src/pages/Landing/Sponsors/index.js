@@ -5,7 +5,7 @@ import Marquee from "react-fast-marquee";
 const Sponsors = ({ brand }) => {
   return (
     <Box bgcolor="white">
-      <Box maxWidth={1000} width="100%" m="auto" pt={24}>
+      <Box maxWidth={1000} width="100%" m="auto">
         <Stack
           py={8}
           gap={4}

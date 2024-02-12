@@ -14,6 +14,7 @@ import {
 import { SOCIAL_LINKS } from "../../components/Footer/constants";
 import { useTheme } from "@emotion/react";
 import { useState } from "react";
+import { FilePresentOutlined, FileUpload } from "@mui/icons-material";
 
 const Contact = () => {
   const currTheme = useTheme();
@@ -34,7 +35,15 @@ const Contact = () => {
   const [branding, setBranding] = useState(false);
   const [webDesign, setWebDesign] = useState(false);
   const [ecommerce, setEcommerce] = useState(false);
+  const [fileName, setFileName] = useState("File Upload");
   const [digitalMarketting, setDigitalMarketting] = useState(false);
+
+  const handleFileChange = (e) => {
+    const file = e.target.files[0];
+    if (file) {
+      setFileName(file.name);
+    }
+  };
 
   return (
     <Box sx={{ overflowY: "hidden" }}>
@@ -63,7 +72,7 @@ const Contact = () => {
           <img alt="spline" src="/images/contact/spline.png" width="90%" />
         </Box> */}
         <Grid
-          spacing={{ xs: 0, md: 24 }}
+          spacing={{ xs: 0, md: 12 }}
           container
           columns={{ xs: 6, md: 12 }}
           alignItems="center"
@@ -84,37 +93,43 @@ const Contact = () => {
                 touch shortly to discuss how we can elevate your business to new
                 heights
               </Typography>
-              <Stack direction="row" spacing={2}>
-                {SOCIAL_LINKS.map(({ icon, url }, idx) => (
-                  <Link href={url}>
-                    <Stack
-                      data-sal="slide-up"
-                      data-sal-delay={idx * 100 + 300}
-                      key={idx}
-                      p={1}
-                      border={2}
-                      borderColor="#00000020"
-                      borderRadius={100}
-                      sx={{
-                        transition: "all ease 0.3s",
-                        cursor: "pointer",
-                        "&:hover": {
-                          borderColor: "#000000",
-                        },
-                      }}
-                    >
-                      {icon}
-                    </Stack>
-                  </Link>
-                ))}
-              </Stack>
+              <ThemeProvider theme={theme}>
+                <Stack spacing={2}>
+                  {SOCIAL_LINKS.map(({ icon, url, text }, idx) => (
+                    <Link href={url} target="_blank">
+                      <Stack direction="row" spacing={1} alignItems="center">
+                        <Stack
+                          data-sal="slide-up"
+                          data-sal-delay={idx * 100}
+                          key={idx}
+                          color="tertiary.main"
+                          p={1}
+                          border={2}
+                          borderColor="#00000020"
+                          borderRadius={100}
+                          sx={{
+                            transition: "all ease 0.3s",
+                            cursor: "pointer",
+                            "&:hover": {
+                              borderColor: "black",
+                            },
+                          }}
+                        >
+                          {icon}
+                        </Stack>
+                        <Typography variant="body2">{text}</Typography>
+                      </Stack>
+                    </Link>
+                  ))}
+                </Stack>
+              </ThemeProvider>
             </Stack>
           </Grid>
           <Grid item xs={6}>
             <Box
               my={8}
               maxWidth={900}
-              p={8}
+              p={6}
               data-sal="slide-up"
               data-sal-delay="300"
               sx={{
@@ -126,7 +141,7 @@ const Contact = () => {
             >
               <form name="contact" method="POST" data-netlify="true">
                 <input type="hidden" name="form-name" value="contact" />
-                <Stack spacing={4} borderRadius={2} width="100%">
+                <Stack spacing={3} borderRadius={2} width="100%">
                   <ThemeProvider theme={theme}>
                     <Stack direction="row" spacing={2}>
                       <TextField
@@ -148,9 +163,27 @@ const Contact = () => {
                       label="Email"
                       name="email"
                       type="email"
+                      component="label"
                       variant="standard"
                       required
                     />
+                    <Stack
+                      direction="row"
+                      justifyContent="space-between"
+                      sx={{ cursor: "pointer" }}
+                      borderBottom={1}
+                      py={1}
+                    >
+                      <Typography
+                        variant="body1"
+                        color="grey.600"
+                        component="label"
+                      >
+                        {fileName}
+                        <input type="file" hidden onChange={handleFileChange} />
+                      </Typography>
+                      <FilePresentOutlined color="tertiary" />
+                    </Stack>
                     <Box>
                       <Typography varian="body2" color="text.secondary">
                         Services
@@ -184,6 +217,14 @@ const Contact = () => {
                         />
                       </Stack>
                     </Box>
+                    <TextField
+                      label="Message"
+                      name="message"
+                      type="text"
+                      variant="standard"
+                      multiline
+                      required
+                    />
                     {/* <FormGroup>
                       <FormControlLabel
                         control={<Checkbox name="branding" />}
@@ -202,11 +243,6 @@ const Contact = () => {
                         label="Digital Marketting"
                       />
                     </FormGroup> */}
-                    <TextField
-                      label="How did you hear from us? (Optional)"
-                      name="referral-source"
-                      variant="standard"
-                    />
                   </ThemeProvider>
                   <Button
                     type="submit"

@@ -27,7 +27,7 @@ const Approach = () => {
               lineHeight={1.4}
             >
               Elevate your business with a unique strategy and compelling
-              content that drives growth,
+              content that drives growth,{" "}
               <Box display="inline" color="primary.main">
                 expanding your reach and revenue.
               </Box>

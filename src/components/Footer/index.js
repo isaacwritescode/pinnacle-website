@@ -84,29 +84,32 @@ const Footer = () => {
               <Stack spacing={5} pt={4}>
                 <Stack spacing={2}>
                   <Typography variant="h6" color="text.primary">
-                    SOCIALS
+                    CONTACT
                   </Typography>
-                  <Stack direction="row" spacing={2}>
-                    {SOCIAL_LINKS.map(({ icon, url }, idx) => (
+                  <Stack spacing={2}>
+                    {SOCIAL_LINKS.map(({ icon, url, text }, idx) => (
                       <Link href={url} target="_blank">
-                        <Stack
-                          data-sal="slide-up"
-                          data-sal-delay={idx * 100}
-                          key={idx}
-                          color="white"
-                          p={1}
-                          border={2}
-                          borderColor="#ffffff20"
-                          borderRadius={100}
-                          sx={{
-                            transition: "all ease 0.3s",
-                            cursor: "pointer",
-                            "&:hover": {
-                              borderColor: "white",
-                            },
-                          }}
-                        >
-                          {icon}
+                        <Stack direction="row" spacing={1} alignItems="center">
+                          <Stack
+                            data-sal="slide-up"
+                            data-sal-delay={idx * 100}
+                            key={idx}
+                            color="white"
+                            p={1}
+                            border={2}
+                            borderColor="#ffffff20"
+                            borderRadius={100}
+                            sx={{
+                              transition: "all ease 0.3s",
+                              cursor: "pointer",
+                              "&:hover": {
+                                borderColor: "white",
+                              },
+                            }}
+                          >
+                            {icon}
+                          </Stack>
+                          <Typography variant="body2">{text}</Typography>
                         </Stack>
                       </Link>
                     ))}
