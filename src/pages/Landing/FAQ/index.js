@@ -11,7 +11,7 @@ const FAQ = () => {
   const theme = useTheme();
   const sm = useMediaQuery(theme.breakpoints.up("sm"));
   return (
-    <Box width="100%" py={12} id="FAQ">
+    <Box width="100%" py={12} id="FAQ" bgcolor="white">
       <Box width={{ xs: "90%", lg: "70%" }} m="auto">
         <Box>
           <Stack spacing={8}>
