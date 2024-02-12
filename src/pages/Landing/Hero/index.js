@@ -19,8 +19,8 @@ const Hero = () => {
         <Box position="absolute" top={0} zIndex={-1}>
           <img src="/images/hero/bg.svg" alt="background" width="100%" />
         </Box>
-        <Box position="absolute" top={0} zIndex={-1}>
-          <Parallax speed={-100}>
+        <Box position="fixed" top={-120} zIndex={-1}>
+          <Parallax speed={-10}>
             <img
               src="/images/hero/mountains.svg"
               alt="mountain with hills"
