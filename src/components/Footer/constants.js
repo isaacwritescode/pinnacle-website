@@ -1,4 +1,4 @@
-import { EmailOutlined, Phone, WhatsApp } from "@mui/icons-material";
+import { EmailOutlined, Phone } from "@mui/icons-material";
 
 const SOCIAL_LINKS = [
   {

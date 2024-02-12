@@ -14,7 +14,7 @@ import {
 import { SOCIAL_LINKS } from "../../components/Footer/constants";
 import { useTheme } from "@emotion/react";
 import { useState } from "react";
-import { FilePresentOutlined, FileUpload } from "@mui/icons-material";
+import { FilePresentOutlined } from "@mui/icons-material";
 
 const Contact = () => {
   const currTheme = useTheme();
