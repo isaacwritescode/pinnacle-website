@@ -9,11 +9,11 @@ export default function Layout({
 }) {
   return (
     <>
-      <Navbar
+      {/* <Navbar
         isMenuVisible={isMenuVisible}
         setIsMenuVisible={setIsMenuVisible}
         userHasScrolled={userHasScrolled}
-      />
+      /> */}
       {isMenuVisible && <Menu setIsMenuVisible={setIsMenuVisible} />}
       <Outlet />
     </>
