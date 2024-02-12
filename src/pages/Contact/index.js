@@ -46,14 +46,14 @@ const Contact = () => {
   };
 
   return (
-    <Box sx={{ overflowY: "hidden" }}>
+    <Stack sx={{ overflowY: "hidden" }}>
       <Checkbox
         checked={branding}
         name="branding"
         inputProps={{ "aria-label": "controlled" }}
         sx={{ opacity: 0, position: "absolute" }}
       />
-      <Box
+      <Stack
         py={{ xs: 16, md: 2 }}
         boxSizing="border-box"
         maxWidth={1000}
@@ -61,6 +61,7 @@ const Contact = () => {
         position="relative"
         width={{ xs: "90%", md: "100%" }}
         height={{ xs: "auto", md: "100vh" }}
+        alignItems="center" justifyContent="center"
       >
         {/* <Box
           display={{ xs: "none", md: "block" }}
@@ -262,8 +263,8 @@ const Contact = () => {
             </Box>
           </Grid>
         </Grid>
-      </Box>
-    </Box>
+      </Stack>
+    </Stack>
   );
 };
 

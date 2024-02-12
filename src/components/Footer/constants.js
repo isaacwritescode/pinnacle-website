@@ -15,7 +15,7 @@ const SOCIAL_LINKS = [
 
 const QUICK_LINKS = [
   {
-    href: "#approach",
+    href: "/#approach",
     title: "Approach",
   },
   {
