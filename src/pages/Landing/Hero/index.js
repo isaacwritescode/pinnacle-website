@@ -37,7 +37,7 @@ const Hero = () => {
             width="100%"
           />
         </Box>
-        <Box py={16} width={{ xs: "90%", md: "70%" }} mx="auto">
+        <Box py={24} width={{ xs: "90%", md: "70%" }} mx="auto">
           <Stack
             alignItems="center"
             spacing={2}
