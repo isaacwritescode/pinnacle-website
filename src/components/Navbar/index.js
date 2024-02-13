@@ -9,6 +9,7 @@ import {
 import { QUICK_LINKS } from "../Footer/constants";
 import { Close, Menu } from "@mui/icons-material";
 import { useLocation } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 
 const Navbar = ({ isMenuVisible, userHasScrolled, setIsMenuVisible }) => {
   const { pathname } = useLocation();
@@ -41,7 +42,11 @@ const Navbar = ({ isMenuVisible, userHasScrolled, setIsMenuVisible }) => {
             >
               <Link href="/">
                 <img
-                  src={condition ? "/images/logos/logo-color-black.svg": "/images/logos/logo-color-free.svg"}
+                  src={
+                    condition
+                      ? "/images/logos/logo-color-black.svg"
+                      : "/images/logos/logo-color-free.svg"
+                  }
                   alt="pinnacle-logo"
                   height={48}
                 />
@@ -54,9 +59,9 @@ const Navbar = ({ isMenuVisible, userHasScrolled, setIsMenuVisible }) => {
             >
               <Stack direction="row" spacing={3}>
                 {QUICK_LINKS.map(({ href, title }, idx) => (
-                  <Link
-                    href={href}
-                    sx={{
+                  <HashLink
+                    to={href}
+                    style={{
                       textDecoration: "none",
                       opacity: 0.5,
                       "&:hover": { opacity: 1 },
@@ -71,7 +76,7 @@ const Navbar = ({ isMenuVisible, userHasScrolled, setIsMenuVisible }) => {
                     >
                       {title}
                     </Typography>
-                  </Link>
+                  </HashLink>
                 ))}
               </Stack>
             </Box>
@@ -152,9 +157,9 @@ const Navbar = ({ isMenuVisible, userHasScrolled, setIsMenuVisible }) => {
             >
               <Stack direction="row" spacing={3}>
                 {QUICK_LINKS.map(({ href, title }, idx) => (
-                  <Link
-                    href={href}
-                    sx={{
+                  <HashLink
+                    to={href}
+                    style={{
                       textDecoration: "none",
                       opacity: 0.5,
                       "&:hover": { opacity: 1 },
@@ -169,7 +174,7 @@ const Navbar = ({ isMenuVisible, userHasScrolled, setIsMenuVisible }) => {
                     >
                       {title}
                     </Typography>
-                  </Link>
+                  </HashLink>
                 ))}
               </Stack>
             </Box>

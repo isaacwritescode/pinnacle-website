@@ -19,11 +19,11 @@ const QUICK_LINKS = [
     title: "Approach",
   },
   {
-    href: "#capabilities",
+    href: "/#capabilities",
     title: "Capabilities",
   },
   {
-    href: "#work",
+    href: "/#work",
     title: "Work",
   },
 ];

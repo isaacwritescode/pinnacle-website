@@ -173,6 +173,7 @@ const Contact = () => {
                       justifyContent="space-between"
                       sx={{ cursor: "pointer" }}
                       borderBottom={1}
+                      borderColor="grey.500"
                       py={1}
                     >
                       <Typography
