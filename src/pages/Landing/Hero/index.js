@@ -7,12 +7,32 @@ import {
   Typography,
   useMediaQuery,
 } from "@mui/material";
+import { useEffect, useState } from "react";
 import { Parallax } from "react-scroll-parallax";
 import { ParallaxProvider } from "react-scroll-parallax";
 
 const Hero = () => {
   const theme = useTheme();
   const md = useMediaQuery(theme.breakpoints.up("md"));
+  const [scrollOpacity, setScrollOpacity] = useState(1);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY;
+      const maxScroll = 300; // Adjust this value based on your requirements
+
+      // Calculate opacity based on scroll position
+      const opacity = 1 - scrollPosition / maxScroll;
+
+      // Ensure opacity stays within 0 to 1 range
+      const clampedOpacity = Math.max(0, Math.min(1, opacity));
+
+      setScrollOpacity(clampedOpacity);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
   return md ? (
     <Box>
       <ParallaxProvider>
@@ -44,6 +64,7 @@ const Hero = () => {
             maxWidth={600}
             mx="auto"
             textAlign="center"
+            sx={{ opacity: scrollOpacity }}
           >
             <Typography variant="h2" color="white">
               Reach your pinnacle
