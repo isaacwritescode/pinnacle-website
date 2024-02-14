@@ -1,5 +1,5 @@
 import { useTheme } from "@emotion/react";
-import { Box, Stack, ThemeProvider, Typography, createTheme } from "@mui/material";
+import { Stack, ThemeProvider, Typography, createTheme } from "@mui/material";
 
 const Card = ({ name, designation, body, avatar, company }) => {
   // Define a custom theme
