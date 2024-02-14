@@ -23,6 +23,7 @@ const Testimonials = () => {
       primary: theme.palette.primary,
     },
   });
+
   return (
     <ThemeProvider theme={darkTheme}>
       <Box bgcolor="#6B30BB" pb={16} overflow="hidden">
