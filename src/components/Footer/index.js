@@ -76,7 +76,7 @@ const Footer = () => {
                   variant="h6"
                   color="text.secondary"
                 >
-                  Canada
+                  Kitchener, Ontario, Canada
                 </Typography>
               </Stack>
             </Grid>
