@@ -24,8 +24,8 @@ const WORK = [
     img: "/images/work/pace.png",
     tags: ["Non-profit", "PTSD", "Health"],
     color: "#EDBD27",
-    title: "P2ACE",
-    desc: "We handled brand strategy and website development for P2ACe dedicated to fostering community among individuals coping with chronic pain and PTSD.",
+    title: "P²ACE",
+    desc: "We handled brand strategy and website development for p²ace dedicated to fostering community among individuals coping with chronic pain and PTSD.",
   },
 ];
 

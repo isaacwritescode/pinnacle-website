@@ -61,7 +61,8 @@ const Contact = () => {
         position="relative"
         width={{ xs: "90%", md: "100%" }}
         height={{ xs: "auto", md: "100vh" }}
-        alignItems="center" justifyContent="center"
+        alignItems="center"
+        justifyContent="center"
       >
         {/* <Box
           display={{ xs: "none", md: "block" }}
@@ -126,7 +127,13 @@ const Contact = () => {
               </ThemeProvider>
             </Stack>
           </Grid>
-          <Grid item xs={6}>
+          <Grid
+            item
+            xs={6}
+            sx={{
+              backgroundImage: "url(/images/hero/hills.svg)",
+            }}
+          >
             <Box
               my={8}
               maxWidth={900}

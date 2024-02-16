@@ -80,6 +80,11 @@ const Testimonials = () => {
                 <Card {...item} />
               </Box>
             ))}
+            {TESTIMONIALS.map((item, idx) => (
+              <Box key={idx} mx={2}>
+                <Card {...item} />
+              </Box>
+            ))}
           </Marquee>
         )}
       </Box>

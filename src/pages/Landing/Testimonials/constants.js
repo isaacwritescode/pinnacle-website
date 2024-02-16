@@ -20,20 +20,7 @@ const TESTIMONIALS = [
     company: "Carmel New Church School",
     body: "Thank you to Pinnacle Brand Solution for their exceptional assistance with our Google campaigns and securing Google grant money. Their expertise and dedication truly made the process seamless.",
   },
-  {
-    avatar: "/images/testimonials/placeholder.png",
-    name: "Full name",
-    designation: "Designation",
-    company: "Company",
-    body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco",
-  },
-  {
-    avatar: "/images/testimonials/placeholder.png",
-    name: "Full name",
-    designation: "Designation",
-    company: "Company",
-    body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco",
-  },
+
 ];
 
 export default TESTIMONIALS;
