@@ -7,6 +7,7 @@ import Layout from "./layout";
 import sal from "sal.js";
 import "sal.js/dist/sal.css";
 import Contact from "./pages/Contact";
+import "react-slideshow-image/dist/styles.css";
 
 function App() {
   const { pathname } = useLocation();

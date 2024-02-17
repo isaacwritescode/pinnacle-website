@@ -11,6 +11,8 @@ import Card from "./Card";
 import "react-slideshow-image/dist/styles.css";
 import TESTIMONIALS from "./constants";
 import Marquee from "react-fast-marquee";
+import { Slide } from "react-slideshow-image";
+import { useRef } from "react";
 
 const Testimonials = () => {
   // Define a custom theme
@@ -23,6 +25,17 @@ const Testimonials = () => {
       primary: theme.palette.primary,
     },
   });
+  const ref = useRef(null);
+
+  const properties = {
+    duration: 3000,
+    transitionDuration: 300,
+    easing: "ease",
+    slidesToScroll: 1,
+    autoplay: true,
+    slidesToShow: 1,
+    arrows: false,
+  };
 
   return (
     <ThemeProvider theme={darkTheme}>
@@ -64,13 +77,13 @@ const Testimonials = () => {
             </Box>
           </Stack>
           {md || (
-            <Stack spacing={4}>
+            <Slide {...properties} ref={ref}>
               {TESTIMONIALS.map((item, idx) => (
-                <Box key={idx} data-sal="slide-up" data-sal-delay={idx * 100}>
+                <Box key={idx} mr={2} ml={2}>
                   <Card {...item} />
                 </Box>
               ))}
-            </Stack>
+            </Slide>
           )}
         </Box>
         {md && (
