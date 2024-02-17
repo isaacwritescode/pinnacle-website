@@ -10,6 +10,7 @@ import {
   ThemeProvider,
   Typography,
   createTheme,
+  useMediaQuery,
 } from "@mui/material";
 import { SOCIAL_LINKS } from "../../components/Footer/constants";
 import { useTheme } from "@emotion/react";
@@ -18,12 +19,16 @@ import { FilePresentOutlined } from "@mui/icons-material";
 
 const Contact = () => {
   const currTheme = useTheme();
+  const md = useMediaQuery(currTheme.breakpoints.up("md"));
+
   const theme = createTheme({
     ...currTheme,
+    mode: "dark",
     palette: {
+      mode: "dark",
       primary: {
-        main: "#000000",
-        contrastText: "#ffffff",
+        main: "#ffffff",
+        contrastText: "#000000",
       },
       tertiary: {
         main: "#511A89",
@@ -54,15 +59,14 @@ const Contact = () => {
         sx={{ opacity: 0, position: "absolute" }}
       />
       <Stack
-        py={{ xs: 16, md: 2 }}
         boxSizing="border-box"
-        maxWidth={1000}
         mx="auto"
         position="relative"
-        width={{ xs: "90%", md: "100%" }}
-        height={{ xs: "auto", md: "100vh" }}
+        mt="68px"
+        height={{ xs: "auto", md: "calc(100vh - 68px)" }}
         alignItems="center"
         justifyContent="center"
+        width={{ xs: "90%", md: "100%" }}
       >
         {/* <Box
           display={{ xs: "none", md: "block" }}
@@ -73,17 +77,27 @@ const Contact = () => {
         >
           <img alt="spline" src="/images/contact/spline.png" width="90%" />
         </Box> */}
+
         <Grid
-          spacing={{ xs: 0, md: 12 }}
+          columnSpacing={{ xs: 0, md: 12 }}
+          rowSpacing={{ xs: 4, md: 0 }}
           container
           columns={{ xs: 6, md: 12 }}
           alignItems="center"
+          justifyContent="center"
+          height="100%"
         >
           <Grid item xs={6}>
-            <Stack spacing={2}>
-              <Typography data-sal="slide-up" data-sal-delay="100" variant="h2">
-                Ready to boost your brand's success?
-              </Typography>
+            <Stack spacing={2} pl={{ md: "32%" }}>
+              <Box
+                pt={{ xs: 8, md: 0 }}
+                data-sal="slide-up"
+                data-sal-delay="100"
+              >
+                <Typography variant={md ? "h2" : "h3"}>
+                  Ready to boost your brand's success?
+                </Typography>
+              </Box>
               <Typography
                 data-sal="slide-up"
                 data-sal-delay="200"
@@ -119,7 +133,9 @@ const Contact = () => {
                         >
                           {icon}
                         </Stack>
-                        <Typography variant="body2">{text}</Typography>
+                        <Typography color="#000000" variant="body2">
+                          {text}
+                        </Typography>
                       </Stack>
                     </Link>
                   ))}
@@ -127,148 +143,255 @@ const Contact = () => {
               </ThemeProvider>
             </Stack>
           </Grid>
-          <Grid
-            item
-            xs={6}
-            sx={{
-              backgroundImage: "url(/images/hero/hills.svg)",
-            }}
-          >
-            <Box
-              my={8}
-              maxWidth={900}
-              p={6}
-              data-sal="slide-up"
-              data-sal-delay="300"
-              sx={{
-                bgcolor: { xs: "#00000010", md: "transparent" },
-                backdropFilter: "blur(3em)",
-                border: 1,
-                borderColor: "grey.300",
-              }}
-            >
-              <form name="contact" method="POST" data-netlify="true">
-                <input type="hidden" name="form-name" value="contact" />
-                <Stack spacing={3} borderRadius={2} width="100%">
-                  <ThemeProvider theme={theme}>
-                    <Stack direction="row" spacing={2}>
-                      <TextField
-                        sx={{ width: "100%" }}
-                        label="First Name"
-                        name="first-name"
-                        variant="standard"
-                        required
-                      />
-                      <TextField
-                        sx={{ width: "100%" }}
-                        label="Last Name"
-                        name="last-name"
-                        variant="standard"
-                        required
-                      />
-                    </Stack>
-                    <TextField
-                      label="Email"
-                      name="email"
-                      type="email"
-                      component="label"
-                      variant="standard"
-                      required
-                    />
-                    <Stack
-                      direction="row"
-                      justifyContent="space-between"
-                      sx={{ cursor: "pointer" }}
-                      borderBottom={1}
-                      borderColor="grey.500"
-                      py={1}
-                    >
-                      <Typography
-                        variant="body1"
-                        color="grey.600"
-                        component="label"
+          <Grid item xs={6} height="100%">
+            {md ? (
+              <Stack
+                alignItems="center"
+                justifyContent="center"
+                height="100%"
+                sx={{
+                  backgroundImage: "url(/images/hero/flattened.svg)",
+                  backgroundRepeat: "no-repeat",
+                  backgroundPosition: "center center",
+                  backgroundSize: "cover",
+                }}
+              >
+                <Box
+                  width="100%"
+                  boxSizing="border-box"
+                  maxWidth={420}
+                  data-sal="slide-up"
+                  data-sal-delay="300"
+                  p={6}
+                  sx={{
+                    bgcolor: "#ffffff10",
+                    backdropFilter: "blur(3em)",
+                    borderRadius: 8,
+                    border: 1,
+                    borderColor: "#ffffff50",
+                  }}
+                >
+                  <form name="contact" method="POST" data-netlify="true">
+                    <input type="hidden" name="form-name" value="contact" />
+                    <Stack spacing={3} borderRadius={2} width="100%">
+                      <ThemeProvider theme={theme}>
+                        <Stack direction="row" spacing={2}>
+                          <TextField
+                            sx={{ width: "100%" }}
+                            label="First Name"
+                            name="first-name"
+                            variant="standard"
+                            required
+                          />
+                          <TextField
+                            sx={{ width: "100%" }}
+                            label="Last Name"
+                            name="last-name"
+                            variant="standard"
+                            required
+                          />
+                        </Stack>
+                        <TextField
+                          label="Email"
+                          name="email"
+                          type="email"
+                          component="label"
+                          variant="standard"
+                          required
+                        />
+                        <Stack
+                          direction="row"
+                          justifyContent="space-between"
+                          sx={{ cursor: "pointer" }}
+                          borderBottom={1}
+                          borderColor="grey.500"
+                          py={1}
+                        >
+                          <Typography
+                            variant="body1"
+                            color="text.secondary"
+                            component="label"
+                          >
+                            {fileName}
+                            <input
+                              type="file"
+                              hidden
+                              onChange={handleFileChange}
+                            />
+                          </Typography>
+                          <FilePresentOutlined color="primary" />
+                        </Stack>
+                        <Box>
+                          <Typography varian="body2" color="text.secondary">
+                            Services
+                          </Typography>
+                          <Stack mt={1} direction="row" gap={1} flexWrap="wrap">
+                            <Chip
+                              color="primary"
+                              variant={branding ? "filled" : "outlined"}
+                              onClick={() => setBranding(!branding)}
+                              label="Branding"
+                            />
+                            <Chip
+                              color="primary"
+                              variant={webDesign ? "filled" : "outlined"}
+                              onClick={() => setWebDesign(!webDesign)}
+                              label="Web Design"
+                            />
+                            <Chip
+                              color="primary"
+                              variant={ecommerce ? "filled" : "outlined"}
+                              onClick={() => setEcommerce(!ecommerce)}
+                              label="Ecommerce"
+                            />
+                            <Chip
+                              color="primary"
+                              variant={
+                                digitalMarketting ? "filled" : "outlined"
+                              }
+                              onClick={() =>
+                                setDigitalMarketting(!digitalMarketting)
+                              }
+                              label="Digital Marketting"
+                            />
+                          </Stack>
+                        </Box>
+                        <TextField
+                          label="Message"
+                          name="message"
+                          type="text"
+                          variant="standard"
+                          multiline
+                          required
+                        />
+                      </ThemeProvider>
+                      <Button
+                        type="submit"
+                        variant="contained"
+                        size="large"
+                        color="primary"
+                        sx={{
+                          width: "fit-content",
+                        }}
                       >
-                        {fileName}
-                        <input type="file" hidden onChange={handleFileChange} />
-                      </Typography>
-                      <FilePresentOutlined color="tertiary" />
+                        Send message
+                      </Button>
                     </Stack>
-                    <Box>
-                      <Typography varian="body2" color="text.secondary">
-                        Services
-                      </Typography>
-                      <Stack mt={1} direction="row" gap={1} flexWrap="wrap">
-                        <Chip
-                          color="tertiary"
-                          variant={branding ? "filled" : "outlined"}
-                          onClick={() => setBranding(!branding)}
-                          label="Branding"
+                  </form>
+                </Box>
+              </Stack>
+            ) : (
+              <Stack alignItems="center" justifyContent="center" height="100%">
+                <Box
+                  width="100%"
+                  boxSizing="border-box"
+                  p={6}
+                  bgcolor="grey.100"
+                  borderRadius={2}
+                >
+                  <form name="contact" method="POST" data-netlify="true">
+                    <input type="hidden" name="form-name" value="contact" />
+                    <Stack spacing={3} width="100%">
+                      <Stack direction="row" spacing={2}>
+                        <TextField
+                          sx={{ width: "100%" }}
+                          label="First Name"
+                          name="first-name"
+                          variant="standard"
+                          required
                         />
-                        <Chip
-                          color="tertiary"
-                          variant={webDesign ? "filled" : "outlined"}
-                          onClick={() => setWebDesign(!webDesign)}
-                          label="Web Design"
-                        />
-                        <Chip
-                          color="tertiary"
-                          variant={ecommerce ? "filled" : "outlined"}
-                          onClick={() => setEcommerce(!ecommerce)}
-                          label="Ecommerce"
-                        />
-                        <Chip
-                          color="tertiary"
-                          variant={digitalMarketting ? "filled" : "outlined"}
-                          onClick={() =>
-                            setDigitalMarketting(!digitalMarketting)
-                          }
-                          label="Digital Marketting"
+                        <TextField
+                          sx={{ width: "100%" }}
+                          label="Last Name"
+                          name="last-name"
+                          variant="standard"
+                          required
                         />
                       </Stack>
-                    </Box>
-                    <TextField
-                      label="Message"
-                      name="message"
-                      type="text"
-                      variant="standard"
-                      multiline
-                      required
-                    />
-                    {/* <FormGroup>
-                      <FormControlLabel
-                        control={<Checkbox name="branding" />}
-                        label="Branding"
+                      <TextField
+                        label="Email"
+                        name="email"
+                        type="email"
+                        component="label"
+                        variant="standard"
+                        required
                       />
-                      <FormControlLabel
-                        control={<Checkbox name="branding" />}
-                        label="Web Design"
+                      <Stack
+                        direction="row"
+                        justifyContent="space-between"
+                        sx={{ cursor: "pointer" }}
+                        borderBottom={1}
+                        borderColor="grey.500"
+                        py={1}
+                      >
+                        <Typography
+                          variant="body1"
+                          color="text.secondary"
+                          component="label"
+                        >
+                          {fileName}
+                          <input
+                            type="file"
+                            hidden
+                            onChange={handleFileChange}
+                          />
+                        </Typography>
+                        <FilePresentOutlined color="tertiary" />
+                      </Stack>
+                      <Box>
+                        <Typography varian="body2" color="text.secondary">
+                          Services
+                        </Typography>
+                        <Stack mt={1} direction="row" gap={1} flexWrap="wrap">
+                          <Chip
+                            color="tertiary"
+                            variant={branding ? "filled" : "outlined"}
+                            onClick={() => setBranding(!branding)}
+                            label="Branding"
+                          />
+                          <Chip
+                            color="tertiary"
+                            variant={webDesign ? "filled" : "outlined"}
+                            onClick={() => setWebDesign(!webDesign)}
+                            label="Web Design"
+                          />
+                          <Chip
+                            color="tertiary"
+                            variant={ecommerce ? "filled" : "outlined"}
+                            onClick={() => setEcommerce(!ecommerce)}
+                            label="Ecommerce"
+                          />
+                          <Chip
+                            color="tertiary"
+                            variant={digitalMarketting ? "filled" : "outlined"}
+                            onClick={() =>
+                              setDigitalMarketting(!digitalMarketting)
+                            }
+                            label="Digital Marketting"
+                          />
+                        </Stack>
+                      </Box>
+                      <TextField
+                        label="Message"
+                        name="message"
+                        type="text"
+                        variant="standard"
+                        multiline
+                        required
                       />
-                      <FormControlLabel
-                        control={<Checkbox name="branding" />}
-                        label="Ecommerce"
-                      />
-                      <FormControlLabel
-                        control={<Checkbox name="branding" />}
-                        label="Digital Marketting"
-                      />
-                    </FormGroup> */}
-                  </ThemeProvider>
-                  <Button
-                    type="submit"
-                    variant="contained"
-                    size="large"
-                    color="tertiary"
-                    sx={{
-                      width: {
-                        md: "fit-content",
-                      },
-                    }}
-                  >
-                    Send message
-                  </Button>
-                </Stack>
-              </form>
-            </Box>
+                      <Button
+                        type="submit"
+                        variant="contained"
+                        size="large"
+                        color="tertiary"
+                      >
+                        Send message
+                      </Button>
+                    </Stack>
+                  </form>
+                </Box>
+              </Stack>
+            )}
           </Grid>
         </Grid>
       </Stack>

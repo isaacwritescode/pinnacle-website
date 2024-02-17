@@ -74,7 +74,7 @@ const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
 
 export default function Accordion({ title, desc, expanded, onChange }) {
   const theme = useTheme();
-  const md = useMediaQuery(theme.breakpoints.up("md"));
+const md = useMediaQuery(theme.breakpoints.up("md"));
   return (
     <CustomAccordion expanded={expanded} onChange={onChange} md={md}>
       <AccordionSummary expanded={expanded}>
