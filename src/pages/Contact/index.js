@@ -230,7 +230,7 @@ const Contact = () => {
                               color="primary"
                               variant={branding ? "filled" : "outlined"}
                               onClick={() => setBranding(!branding)}
-                              label="Branding"
+                              label="Branding & Strategy"
                             />
                             <Chip
                               color="primary"
@@ -347,7 +347,7 @@ const Contact = () => {
                             color="tertiary"
                             variant={branding ? "filled" : "outlined"}
                             onClick={() => setBranding(!branding)}
-                            label="Branding"
+                            label="Branding & Strategy"
                           />
                           <Chip
                             color="tertiary"
