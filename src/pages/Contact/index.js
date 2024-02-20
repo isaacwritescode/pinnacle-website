@@ -244,11 +244,11 @@ const Contact = () => {
                               checked={webDesign}
                               hidden
                             />
-                            hidden
                             <input
                               type="checkbox"
                               name="ecommerce"
                               checked={ecommerce}
+                              hidden
                             />
                             <input
                               type="checkbox"
