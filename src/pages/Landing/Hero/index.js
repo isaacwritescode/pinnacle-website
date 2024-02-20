@@ -9,7 +9,6 @@ import {
 } from "@mui/material";
 import { useEffect, useState } from "react";
 import { Parallax } from "react-scroll-parallax";
-import { ParallaxProvider } from "react-scroll-parallax";
 
 const Hero = () => {
   const theme = useTheme();
@@ -35,20 +34,18 @@ const Hero = () => {
   }, []);
   return md ? (
     <Box>
-      <ParallaxProvider>
-        <Box position="absolute" top={0} zIndex={-1}>
-          <img src="/images/hero/bg.svg" alt="background" width="100%" />
-        </Box>
-        <Box position="fixed" bottom={0} zIndex={-1}>
-          <Parallax speed={-10}>
-            <img
-              src="/images/hero/mountains.svg"
-              alt="mountain with hills"
-              width="100%"
-            />
-          </Parallax>
-        </Box>
-      </ParallaxProvider>
+      <Box position="absolute" top={0} zIndex={-1}>
+        <img src="/images/hero/bg.svg" alt="background" width="100%" />
+      </Box>
+      <Box position="fixed" bottom={0} zIndex={-1}>
+        <Parallax speed={-10}>
+          <img
+            src="/images/hero/mountains.svg"
+            alt="mountain with hills"
+            width="100%"
+          />
+        </Parallax>
+      </Box>
       <Box height={"100vh"} zIndex={99} position="relative">
         <Box position="absolute" bottom={-12} zIndex={-1}>
           <img

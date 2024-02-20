@@ -226,6 +226,15 @@ const Contact = () => {
                             Services
                           </Typography>
                           <Stack mt={1} direction="row" gap={1} flexWrap="wrap">
+                            <Box position="absolute" sx={{ opacity: 0 }}>
+                              <input type="checkbox" name="branding" />
+                              <input type="checkbox" name="web-design" />
+                              <input type="checkbox" name="ecommerce" />
+                              <input
+                                type="checkbox"
+                                name="digital-marketting"
+                              />
+                            </Box>
                             <Chip
                               color="primary"
                               variant={branding ? "filled" : "outlined"}

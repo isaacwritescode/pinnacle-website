@@ -8,6 +8,7 @@ import sal from "sal.js";
 import "sal.js/dist/sal.css";
 import Contact from "./pages/Contact";
 import "react-slideshow-image/dist/styles.css";
+import { ParallaxProvider } from "react-scroll-parallax";
 
 function App() {
   const { pathname } = useLocation();
@@ -34,21 +35,23 @@ function App() {
 
   return (
     <ThemeProvider theme={theme}>
-      <Routes>
-        <Route
-          path="/"
-          element={
-            <Layout
-              isMenuVisible={isMenuVisible}
-              setIsMenuVisible={setIsMenuVisible}
-              userHasScrolled={userHasScrolled}
-            />
-          }
-        >
-          <Route index element={<Landing />} />
-          <Route path="/contact" element={<Contact />} />
-        </Route>
-      </Routes>
+      <ParallaxProvider>
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <Layout
+                isMenuVisible={isMenuVisible}
+                setIsMenuVisible={setIsMenuVisible}
+                userHasScrolled={userHasScrolled}
+              />
+            }
+          >
+            <Route index element={<Landing />} />
+            <Route path="/contact" element={<Contact />} />
+          </Route>
+        </Routes>
+      </ParallaxProvider>
     </ThemeProvider>
   );
 }
