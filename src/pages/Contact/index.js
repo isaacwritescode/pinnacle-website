@@ -171,7 +171,7 @@ const Contact = () => {
                     borderColor: "#ffffff50",
                   }}
                 >
-                  <form name="contact" method="POST" data-netlify="true">
+                  <form name="contact" enctype="multipart/form-data" data-netlify="true">
                     <input type="hidden" name="form-name" value="contact" />
                     <Stack spacing={3} borderRadius={2} width="100%">
                       <ThemeProvider theme={theme}>
