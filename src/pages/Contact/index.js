@@ -171,7 +171,12 @@ const Contact = () => {
                     borderColor: "#ffffff50",
                   }}
                 >
-                  <form name="contact" enctype="multipart/form-data" method="POST" data-netlify="true">
+                  <form
+                    name="contact"
+                    enctype="multipart/form-data"
+                    method="POST"
+                    data-netlify="true"
+                  >
                     <input type="hidden" name="form-name" value="contact" />
                     <Stack spacing={3} borderRadius={2} width="100%">
                       <ThemeProvider theme={theme}>
@@ -216,6 +221,7 @@ const Contact = () => {
                             <input
                               type="file"
                               name="file-upload"
+                              hidden
                               onChange={handleFileChange}
                             />
                           </Typography>
@@ -226,15 +232,30 @@ const Contact = () => {
                             Services
                           </Typography>
                           <Stack mt={1} direction="row" gap={1} flexWrap="wrap">
-                            <Box position="absolute" sx={{ opacity: 0 }}>
-                              <input type="checkbox" name="branding" />
-                              <input type="checkbox" name="web-design" />
-                              <input type="checkbox" name="ecommerce" />
-                              <input
-                                type="checkbox"
-                                name="digital-marketting"
-                              />
-                            </Box>
+                            <input
+                              type="checkbox"
+                              name="branding"
+                              checked={branding}
+                              hidden
+                            />
+                            <input
+                              type="checkbox"
+                              name="web-design"
+                              checked={webDesign}
+                              hidden
+                            />
+                            hidden
+                            <input
+                              type="checkbox"
+                              name="ecommerce"
+                              checked={ecommerce}
+                            />
+                            <input
+                              type="checkbox"
+                              name="digital-marketting"
+                              checked={digitalMarketting}
+                              hidden
+                            />
                             <Chip
                               color="primary"
                               variant={branding ? "filled" : "outlined"}
