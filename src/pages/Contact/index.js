@@ -216,6 +216,7 @@ const Contact = () => {
                             <input
                               type="file"
                               hidden
+                              name="file"
                               onChange={handleFileChange}
                             />
                           </Typography>
