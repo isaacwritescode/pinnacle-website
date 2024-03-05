@@ -14,10 +14,12 @@ import {
 } from "@mui/material";
 import { SOCIAL_LINKS } from "../../components/Footer/constants";
 import { useTheme } from "@emotion/react";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { FilePresentOutlined } from "@mui/icons-material";
+import emailjs from "@emailjs/browser";
 
 const Contact = () => {
+  const form = useRef();
   const currTheme = useTheme();
   const md = useMediaQuery(currTheme.breakpoints.up("md"));
 
@@ -48,6 +50,24 @@ const Contact = () => {
     if (file) {
       setFileName(file.name);
     }
+  };
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm("service_2f5acja", "template_iqappiw", form.current, {
+        publicKey: "Q13BUaYOE6QZh1kQe",
+      })
+      .then(
+        () => {
+          console.log("SUCCESS!");
+        },
+        (error) => {
+          console.log("FAILED...", error.text);
+          alert(error.text);
+        }
+      );
   };
 
   return (
@@ -174,8 +194,8 @@ const Contact = () => {
                   <form
                     name="contact"
                     enctype="multipart/form-data"
-                    method="POST"
-                    data-netlify="true"
+                    ref={form}
+                    onSubmit={sendEmail}
                   >
                     <input type="hidden" name="form-name" value="contact" />
                     <Stack spacing={3} borderRadius={2} width="100%">

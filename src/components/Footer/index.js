@@ -3,13 +3,14 @@ import {
   Box,
   Button,
   Grid,
-  Link,
   Stack,
   ThemeProvider,
   Typography,
   createTheme,
+  Link
 } from "@mui/material";
 import { SOCIAL_LINKS, QUICK_LINKS } from "./constants";
+import { HashLink } from "react-router-hash-link";
 
 const Footer = () => {
   // Define a custom theme
@@ -52,7 +53,7 @@ const Footer = () => {
                 </Typography>
 
                 {QUICK_LINKS.map(({ href, title }, idx) => (
-                  <Link href={href}>
+                  <Link to={href}>
                     <Typography
                       data-sal="slide-up"
                       data-sal-delay={idx * 100}
@@ -88,7 +89,7 @@ const Footer = () => {
                   </Typography>
                   <Stack spacing={2}>
                     {SOCIAL_LINKS.map(({ icon, url, text }, idx) => (
-                      <Link href={url} target="_blank">
+                      <Link to={url} target="_blank">
                         <Stack direction="row" spacing={1} alignItems="center">
                           <Stack
                             data-sal="slide-up"
@@ -115,11 +116,11 @@ const Footer = () => {
                     ))}
                   </Stack>
                 </Stack>
-                <Link href="/contact">
+                <HashLink to="/contact">
                   <Button variant="contained" size="large">
                     Start a project
                   </Button>
-                </Link>
+                </HashLink>
               </Stack>
             </Grid>
           </Grid>

@@ -9,7 +9,7 @@ import {
 import { QUICK_LINKS } from "../Footer/constants";
 import { Close, Menu } from "@mui/icons-material";
 import { useLocation } from "react-router-dom";
-import { HashLink } from "react-router-hash-link";
+import { HashLink } from "react-router-hash-link"; 
 
 const Navbar = ({ isMenuVisible, userHasScrolled, setIsMenuVisible }) => {
   const { pathname } = useLocation();
@@ -85,7 +85,7 @@ const Navbar = ({ isMenuVisible, userHasScrolled, setIsMenuVisible }) => {
               data-sal="slide-up"
               data-sal-delay="100"
             >
-              <Link href="contact">
+              <HashLink to="contact">
                 <Button
                   variant="outlined"
                   size="small"
@@ -94,7 +94,7 @@ const Navbar = ({ isMenuVisible, userHasScrolled, setIsMenuVisible }) => {
                 >
                   Contact
                 </Button>
-              </Link>
+              </HashLink>
             </Box>
             <Box
               display={{ xs: "block", md: "none" }}
