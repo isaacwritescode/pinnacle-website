@@ -34,7 +34,7 @@ const Testimonials = () => {
     slidesToScroll: 1,
     autoplay: true,
     slidesToShow: 1,
-    arrows: false,
+    arrows: true,
   };
 
   return (
