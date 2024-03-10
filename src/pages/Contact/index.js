@@ -4,7 +4,9 @@ import {
   Checkbox,
   Chip,
   Grid,
+  IconButton,
   Link,
+  Modal,
   Stack,
   TextField,
   ThemeProvider,
@@ -15,7 +17,7 @@ import {
 import { SOCIAL_LINKS } from "../../components/Footer/constants";
 import { useTheme } from "@emotion/react";
 import { useRef, useState } from "react";
-import { FilePresentOutlined } from "@mui/icons-material";
+import { Close, FilePresentOutlined } from "@mui/icons-material";
 import emailjs from "@emailjs/browser";
 
 const Contact = () => {
@@ -45,6 +47,8 @@ const Contact = () => {
   const [fileName, setFileName] = useState("File Upload");
   const [digitalMarketting, setDigitalMarketting] = useState(false);
 
+  const [recieved, setRecieved] = useState(false);
+
   const handleFileChange = (e) => {
     const file = e.target.files[0];
     if (file) {
@@ -61,10 +65,9 @@ const Contact = () => {
       })
       .then(
         () => {
-          console.log("SUCCESS!");
+          setRecieved(true);
         },
         (error) => {
-          console.log("FAILED...", error.text);
           alert(error.text);
         }
       );
@@ -72,6 +75,45 @@ const Contact = () => {
 
   return (
     <Stack sx={{ overflowY: "hidden" }}>
+      {recieved && (
+        <Modal open={recieved} onClose={() => setRecieved(false)}>
+          <Box
+            sx={{
+              position: "absolute",
+              top: "50%",
+              left: "50%",
+              transform: "translate(-50%, -50%)",
+              width: 400,
+              bgcolor: "background.paper",
+              borderRadius: 8,
+              p: 4,
+            }}
+          >
+            <Stack spacing={2} alignItems="start">
+              <Box width="100%">
+                <IconButton
+                  onClick={() => setRecieved(false)}
+                  sx={{ float: "right" }}
+                >
+                  <Close />
+                </IconButton>
+              </Box>
+              <Typography variant="h3">We've recieved your message!</Typography>
+              <Typography variant="body1" color="text.secondary">
+                Thanks for reaching out, We'll get back to you real soon!
+              </Typography>
+              <Button
+                onClick={() => setRecieved(false)}
+                size="large"
+                color="tertiary"
+                variant="contained"
+              >
+                Got it
+              </Button>
+            </Stack>
+          </Box>
+        </Modal>
+      )}
       <Checkbox
         checked={branding}
         name="branding"
@@ -197,7 +239,6 @@ const Contact = () => {
                     ref={form}
                     onSubmit={sendEmail}
                   >
-                    <input type="hidden" name="form-name" value="contact" />
                     <Stack spacing={3} borderRadius={2} width="100%">
                       <ThemeProvider theme={theme}>
                         <Stack direction="row" spacing={2}>
