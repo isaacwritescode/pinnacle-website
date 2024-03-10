@@ -20,18 +20,15 @@ const Approach = () => {
         <Box width={{ xs: "90%", lg: "100%" }} m="auto">
           <Stack maxWidth={800} pt={{ xs: 8, md: 12 }} pb={2}>
             <Typography variant="h5">Approach</Typography>
-            <Typography
-              data-sal="slide-up"
-              data-sal-delay="200"
-              variant={md ? "h3" : "h4"}
-              lineHeight={1.4}
-            >
-              Elevate your business with a unique strategy and compelling
-              content that drives growth,{" "}
-              <Box display="inline" color="primary.main">
-                expanding your reach and revenue.
-              </Box>
-            </Typography>
+            <Box data-sal="slide-up" data-sal-delay="200">
+              <Typography variant={md ? "h3" : "h4"} lineHeight={1.4}>
+                Elevate your business with a unique strategy and compelling
+                content that drives growth,{" "}
+                <Box display="inline" color="primary.main">
+                  expanding your reach and revenue.
+                </Box>
+              </Typography>
+            </Box>
           </Stack>
           <Grid container spacing={8} columns={{ md: 12 }}>
             <Grid item md={6}>

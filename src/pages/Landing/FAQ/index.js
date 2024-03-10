@@ -15,15 +15,15 @@ const FAQ = () => {
       <Box width={{ xs: "90%", lg: "70%" }} m="auto">
         <Box>
           <Stack spacing={8}>
-            <Typography
-              data-sal="slide-up"
-              data-sal-delay="100"
-              variant={sm ? "h1" : "h2"}
-              textAlign="center"
-              fontWeight={600}
-            >
-              FAQ
-            </Typography>
+            <Box data-sal="slide-up" data-sal-delay="100">
+              <Typography
+                variant={sm ? "h1" : "h2"}
+                textAlign="center"
+                fontWeight={600}
+              >
+                FAQ
+              </Typography>
+            </Box>
             <AccordionGroup expanded={expanded} handleChange={handleChange} />
           </Stack>
         </Box>
