@@ -39,7 +39,7 @@ const Testimonials = () => {
 
   return (
     <ThemeProvider theme={darkTheme}>
-      <Box bgcolor="#6B30BB" pb={16} overflow="hidden">
+      <Box id="testimonials" bgcolor="#6B30BB" pb={16} overflow="hidden">
         <Box width={{ xs: "90%", md: "70%" }} mx="auto">
           <Stack textAlign="center" pt={24} pb={{ xs: 8, md: 16 }}>
             <Box position="relative" textAlign="center">

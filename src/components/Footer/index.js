@@ -24,7 +24,7 @@ const Footer = () => {
   });
   return (
     <ThemeProvider theme={darkTheme}>
-      <Box bgcolor="#212123">
+      <Box id="footer" bgcolor="#212123">
         <Box width={{ xs: "90%", md: "70%" }} mx="auto" py={{ xs: 8, md: 24 }}>
           <Grid container columns={{ xs: 3, sm: 6, lg: 12 }} spacing={12}>
             <Grid item xs={3}>
@@ -53,7 +53,7 @@ const Footer = () => {
                 </Typography>
 
                 {QUICK_LINKS.map(({ href, title }, idx) => (
-                  <Link to={href}>
+                  <HashLink to={href}>
                     <Typography
                       data-sal="slide-up"
                       data-sal-delay={idx * 100}
@@ -62,7 +62,7 @@ const Footer = () => {
                     >
                       {title}
                     </Typography>
-                  </Link>
+                  </HashLink>
                 ))}
               </Stack>
             </Grid>
@@ -89,7 +89,7 @@ const Footer = () => {
                   </Typography>
                   <Stack spacing={2}>
                     {SOCIAL_LINKS.map(({ icon, url, text }, idx) => (
-                      <Link to={url} target="_blank">
+                      <Link href={url} target="_blank">
                         <Stack direction="row" spacing={1} alignItems="center">
                           <Stack
                             data-sal="slide-up"

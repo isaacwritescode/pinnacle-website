@@ -15,8 +15,8 @@ const Approach = () => {
   const md = useMediaQuery(theme.breakpoints.up("md"));
   const [currItemIdx, setCurrItemIdx] = useState(0);
   return (
-    <Box bgcolor="white">
-      <Box width="100%" maxWidth={1000} mx="auto" pb={12} id="approach">
+    <Box bgcolor="white" pb={12} id="approach">
+      <Box width="100%" maxWidth={1000} mx="auto">
         <Box width={{ xs: "90%", lg: "100%" }} m="auto">
           <Stack maxWidth={800} pt={{ xs: 8, md: 12 }} pb={2}>
             <Typography variant="h5">Approach</Typography>

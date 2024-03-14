@@ -84,6 +84,17 @@ body {
   border-radius: 100px;
 }
 
+#sponsors,
+#approach,
+#capabilities,
+#work,
+#FAQ,
+#testimonials,
+#footer {
+  position: relative;
+  z-index: 1;
+}
+
 @keyframes pop {
   from {
     transform: scale(0.5);
